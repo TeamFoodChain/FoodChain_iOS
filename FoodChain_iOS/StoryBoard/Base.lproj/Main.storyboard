@@ -18,12 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3W-sT-mzk">
-                                <rect key="frame" x="164" y="547" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3W-sT-mzk">
+                                <rect key="frame" x="62" y="464" width="251" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="Kakao"/>
                                 <connections>
-                                    <action selector="LoginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="up2-0s-tZW"/>
+                                    <action selector="KakaoLoginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Idz-N4-WXG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hay-NB-GBu">
+                                <rect key="frame" x="62" y="374" width="251" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Login"/>
+                                <connections>
+                                    <action selector="LoginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ot4-u9-5BF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -182,4 +190,8 @@
             <point key="canvasLocation" x="1214" y="-696"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Kakao" width="251" height="38"/>
+        <image name="Login" width="251" height="38"/>
+    </resources>
 </document>

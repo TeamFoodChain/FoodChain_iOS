@@ -11,20 +11,24 @@ import UIKit
 class LoginViewController: UIViewController {
     
     
-    @IBOutlet weak var continueLB: UIButton!
+    func getAppDelegate() -> AppDelegate!{
+        return UIApplication.shared.delegate as! AppDelegate
+    }
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let appDelegate = getAppDelegate() {
+            appDelegate.loginViewController = self
+        }else{
+            print("Appdelegate is nil")
+        }
        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    @IBAction func LoginAction(_ sender: Any) {
+    @IBAction func KakaoLoginAction(_ sender: Any) {
         
-//        let mainview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbarview") as! TabBarViewController
-//
-//        present(mainview, animated: true, completion: nil
-//        )
         
         let session :KOSession = KOSession.shared()
         
@@ -39,14 +43,21 @@ class LoginViewController: UIViewController {
             if error != nil {
                 print(error?.localizedDescription ?? "")
             }else if session.isOpen() {
-                KOSessionTask.userMeTask(completion: { (profile, error)  -> Void in
-                    if profile != nil{
-                        print(profile!)
+                KOSessionTask.userMeTask(completion: { [weak self](error, kakao) -> Void in
+                    if kakao != nil{
+                        
+                        print(kakao!)
+                        let mainview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbarview") as! TabBarViewController
+                        
+                        self?.present(mainview, animated: true, completion: nil)
+                        
                     }
                     else{
                         print(error!)
                     }
+                    
                 })
+
             
             } else {
                 print("isNotOpen")
@@ -58,14 +69,16 @@ class LoginViewController: UIViewController {
        
     }
     
-//    @IBAction func ContinueAction(_ sender: Any) {
-//
-//        let favoriteview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "favoriteview")
-//        present(favoriteview, animated: true, completion: nil)
-//
-//
-//
-//    }
+    @IBAction func LoginAction(_ sender: Any) {
+
+        let mainview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbarview") as! TabBarViewController
+        
+        present(mainview, animated: true, completion: nil)
+
+
+
+
+    }
     
 
 }

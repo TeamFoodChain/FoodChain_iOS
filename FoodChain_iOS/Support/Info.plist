@@ -34,12 +34,18 @@
     <key>LSApplicationQueriesSchemes</key>
     <array>
         <!-- 공통 -->
-        <string>kakao9f1b4a4bf33dd8d3d9ef31201e4ffb9f</string>
+        <string>kakao0123456789abcdefghijklmn</string>
+        
         <!-- 간편로그인 -->
         <string>kakaokompassauth</string>
+        <string>storykompassauth</string>
+        
         <!-- 카카오톡링크 -->
         <string>kakaolink</string>
         <string>kakaotalk-5.9.7</string>
+        
+        <!-- 카카오스토리링크 -->
+        <string>storylink</string>
     </array>
     <key>LSRequiresIPhoneOS</key>
 	<true/>

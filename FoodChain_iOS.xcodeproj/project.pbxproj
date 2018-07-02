@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		522B10CC20E9D1F70002386D /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522B10CB20E9D1F70002386D /* KakaoOpenSDK.framework */; };
+		522B10D320EA207F0002386D /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B10D220EA207F0002386D /* UserInfo.swift */; };
 		52FBDED620E8765F00AEEB1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBDED520E8765F00AEEB1E /* AppDelegate.swift */; };
 		52FBDED820E8765F00AEEB1E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBDED720E8765F00AEEB1E /* LoginViewController.swift */; };
 		52FBDEDB20E8765F00AEEB1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FBDED920E8765F00AEEB1E /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		522B10CB20E9D1F70002386D /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
 		522B10CE20E9D3FC0002386D /* KakaoOpenSDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KakaoOpenSDK-Bridging-Header.h"; sourceTree = "<group>"; };
+		522B10D220EA207F0002386D /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		52FBDED220E8765F00AEEB1E /* FoodChain_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodChain_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FBDED520E8765F00AEEB1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FBDED720E8765F00AEEB1E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		522B10CF20EA1A7C0002386D /* KakaoLogin */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = KakaoLogin;
+			sourceTree = "<group>";
+		};
 		52FBDEC920E8765F00AEEB1E = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +116,7 @@
 		52FBDEE720E8797A00AEEB1E /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				522B10CF20EA1A7C0002386D /* KakaoLogin */,
 				52FBDEEE20E87D1800AEEB1E /* Network */,
 			);
 			path = Module;
@@ -159,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				52FBDEEF20E87D2A00AEEB1E /* APIRouter.swift */,
+				522B10D220EA207F0002386D /* UserInfo.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -373,6 +384,7 @@
 				52FBDF0920E8966F00AEEB1E /* FavoriteCollectionViewCell.swift in Sources */,
 				52FBDED820E8765F00AEEB1E /* LoginViewController.swift in Sources */,
 				52FBDEF420E8897800AEEB1E /* TabBarViewController.swift in Sources */,
+				522B10D320EA207F0002386D /* UserInfo.swift in Sources */,
 				52FBDED620E8765F00AEEB1E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
