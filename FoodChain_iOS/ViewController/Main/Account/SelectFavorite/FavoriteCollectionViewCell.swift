@@ -11,7 +11,14 @@ import UIKit
 
 class FavoriteCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var FavoriteLB: UILabel!
+    @IBOutlet weak var favoriteLB: UILabel!
+    
+    @IBOutlet weak var favoriteImg: UIImageView!
+    override func awakeFromNib() {
+        self.layer.cornerRadius = 10.0
+        favoriteImg.layer.cornerRadius = 10.0
+        
+    }
     
     var count = 0
     override var isSelected: Bool {

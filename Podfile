@@ -15,4 +15,5 @@ target 'FoodChain_iOS' do
     pod 'GooglePlaces'
     pod 'AlamofireObjectMapper'
     pod	'ObjectMapper'
+    pod 'Parchment'
 end

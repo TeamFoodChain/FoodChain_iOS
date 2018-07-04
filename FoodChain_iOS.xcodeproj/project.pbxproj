@@ -17,6 +17,9 @@
 		528E324320EC7E090082D52C /* KakaoOwnerJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E324220EC7E090082D52C /* KakaoOwnerJoinViewController.swift */; };
 		52996EE120EC1CAC00F33A6D /* OwnerJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52996EE020EC1CAC00F33A6D /* OwnerJoinViewController.swift */; };
 		52996EE320EC266500F33A6D /* SelectUsertypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52996EE220EC266500F33A6D /* SelectUsertypeViewController.swift */; };
+		52C6D03B20ECC9D00050A7C8 /* SHhomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6D03A20ECC9D00050A7C8 /* SHhomeViewController.swift */; };
+		52C6D03D20ECF82E0050A7C8 /* SHtimesaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6D03C20ECF82E0050A7C8 /* SHtimesaleViewController.swift */; };
+		52C6D03F20ECF85B0050A7C8 /* SHmarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6D03E20ECF85B0050A7C8 /* SHmarketViewController.swift */; };
 		52FBDED620E8765F00AEEB1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBDED520E8765F00AEEB1E /* AppDelegate.swift */; };
 		52FBDED820E8765F00AEEB1E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBDED720E8765F00AEEB1E /* LoginViewController.swift */; };
 		52FBDEDB20E8765F00AEEB1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FBDED920E8765F00AEEB1E /* Main.storyboard */; };
@@ -47,6 +50,9 @@
 		528E324220EC7E090082D52C /* KakaoOwnerJoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoOwnerJoinViewController.swift; sourceTree = "<group>"; };
 		52996EE020EC1CAC00F33A6D /* OwnerJoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerJoinViewController.swift; sourceTree = "<group>"; };
 		52996EE220EC266500F33A6D /* SelectUsertypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUsertypeViewController.swift; sourceTree = "<group>"; };
+		52C6D03A20ECC9D00050A7C8 /* SHhomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHhomeViewController.swift; sourceTree = "<group>"; };
+		52C6D03C20ECF82E0050A7C8 /* SHtimesaleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHtimesaleViewController.swift; sourceTree = "<group>"; };
+		52C6D03E20ECF85B0050A7C8 /* SHmarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHmarketViewController.swift; sourceTree = "<group>"; };
 		52FBDED220E8765F00AEEB1E /* FoodChain_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodChain_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FBDED520E8765F00AEEB1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FBDED720E8765F00AEEB1E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -235,6 +241,8 @@
 			isa = PBXGroup;
 			children = (
 				52FBDEF520E88B3C00AEEB1E /* StoreHomeViewController.swift */,
+				52C6D03C20ECF82E0050A7C8 /* SHtimesaleViewController.swift */,
+				52C6D03E20ECF85B0050A7C8 /* SHmarketViewController.swift */,
 			);
 			path = StoreHome;
 			sourceTree = "<group>";
@@ -249,6 +257,7 @@
 		52FBDF0420E8956B00AEEB1E /* Mypage */ = {
 			isa = PBXGroup;
 			children = (
+				52C6D03A20ECC9D00050A7C8 /* SHhomeViewController.swift */,
 			);
 			path = Mypage;
 			sourceTree = "<group>";
@@ -395,6 +404,7 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Parchment/Parchment.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -407,6 +417,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parchment.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -428,12 +439,15 @@
 				52FBDEED20E87AC800AEEB1E /* Extension.swift in Sources */,
 				528E324120EC7CDB0082D52C /* KakaoSelectUsertypeViewController.swift in Sources */,
 				52FBDEF620E88B3C00AEEB1E /* StoreHomeViewController.swift in Sources */,
+				52C6D03B20ECC9D00050A7C8 /* SHhomeViewController.swift in Sources */,
 				52FBDEF020E87D2A00AEEB1E /* APIRouter.swift in Sources */,
 				52FBDF0720E895C600AEEB1E /* FavoriteViewController.swift in Sources */,
 				528E324320EC7E090082D52C /* KakaoOwnerJoinViewController.swift in Sources */,
 				52FBDF0920E8966F00AEEB1E /* FavoriteCollectionViewCell.swift in Sources */,
 				525FCB8120EBAE9D0076C378 /* TermViewController.swift in Sources */,
 				52FBDED820E8765F00AEEB1E /* LoginViewController.swift in Sources */,
+				52C6D03D20ECF82E0050A7C8 /* SHtimesaleViewController.swift in Sources */,
+				52C6D03F20ECF85B0050A7C8 /* SHmarketViewController.swift in Sources */,
 				52FBDEF420E8897800AEEB1E /* TabBarViewController.swift in Sources */,
 				52996EE320EC266500F33A6D /* SelectUsertypeViewController.swift in Sources */,
 				522A24F520EA646200D1C272 /* KakaoJoinModule.swift in Sources */,

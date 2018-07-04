@@ -1,20 +1,19 @@
 //
-//  TabBarViewController.swift
+//  SHmarketViewController.swift
 //  FoodChain_iOS
 //
-//  Created by 신동규 on 2018. 7. 1..
+//  Created by 신동규 on 2018. 7. 4..
 //  Copyright © 2018년 신동규. All rights reserved.
 //
 
 import UIKit
 
-class TabBarViewController: UITabBarController {
+class SHmarketViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tabBar.unselectedItemTintColor = UIColor.black
-       
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
