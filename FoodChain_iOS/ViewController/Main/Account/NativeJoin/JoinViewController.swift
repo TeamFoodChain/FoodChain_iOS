@@ -31,9 +31,9 @@ class JoinViewController: UIViewController {
         passTF.setBottomBorder()
         numberTF.setBottomBorder()
         
-//        initAddTarget() //emailcheck 추가하면됨
-//        JoinBtn.isEnabled = false
-//        JoinBtn.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        initAddTarget() //emailcheck 추가하면됨
+        JoinBtn.isEnabled = false
+        JoinBtn.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
 
         self.navigationItem.hidesBackButton = true
         let newBackButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: self, action: #selector(JoinViewController.back(sender:)))
@@ -135,7 +135,7 @@ class JoinViewController: UIViewController {
         
         let mainview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "favoriteview")
         
-        present(mainview, animated: true, completion: nil)
+        navigationController?.pushViewController(mainview, animated: true)
     }
     
     

@@ -63,7 +63,8 @@ class KakaoOwnerJoinViewController: UIViewController {
         
         let mainview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "favoriteview")
         
-        present(mainview, animated: true, completion: nil)
+        
+        navigationController?.pushViewController(mainview, animated: true)
     }
     
 

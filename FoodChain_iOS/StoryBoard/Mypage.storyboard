@@ -26,11 +26,11 @@
             </objects>
             <point key="canvasLocation" x="3718" y="1173"/>
         </scene>
-        <!--4-->
+        <!--Navigation Controller-->
         <scene sceneID="mXz-JC-D7g">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="08W-X4-mNe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="4" id="W8X-0c-Quc"/>
+                    <tabBarItem key="tabBarItem" title="" image="mypageIconGroup" id="W8X-0c-Quc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zx5-7n-bDv">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -46,4 +46,7 @@
             <point key="canvasLocation" x="2828" y="1173"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mypageIconGroup" width="24" height="24"/>
+    </resources>
 </document>

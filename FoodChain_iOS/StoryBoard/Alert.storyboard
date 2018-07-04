@@ -26,11 +26,11 @@
             </objects>
             <point key="canvasLocation" x="3718" y="519"/>
         </scene>
-        <!--3-->
+        <!--Navigation Controller-->
         <scene sceneID="XKH-MP-z0l">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7gv-uU-Vit" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="3" id="m5W-pl-YR3"/>
+                    <tabBarItem key="tabBarItem" title="" image="alarmIconGroup" id="m5W-pl-YR3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JJp-Ao-nfr">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -46,4 +46,7 @@
             <point key="canvasLocation" x="2828" y="520"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="alarmIconGroup" width="24" height="24"/>
+    </resources>
 </document>

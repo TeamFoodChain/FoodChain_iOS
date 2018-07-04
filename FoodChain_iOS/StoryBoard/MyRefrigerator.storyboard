@@ -26,11 +26,11 @@
             </objects>
             <point key="canvasLocation" x="3719" y="-128"/>
         </scene>
-        <!--2-->
+        <!--Navigation Controller-->
         <scene sceneID="6O1-6Q-72q">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WpW-4M-CBa" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="2" id="9Ug-A1-fxQ"/>
+                    <tabBarItem key="tabBarItem" title="" image="refrigerIconGroup" id="9Ug-A1-fxQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qt3-Ch-R8a">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -46,4 +46,7 @@
             <point key="canvasLocation" x="2828" y="-128"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="refrigerIconGroup" width="24" height="24"/>
+    </resources>
 </document>

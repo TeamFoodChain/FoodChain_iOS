@@ -24,6 +24,7 @@ class TermViewController: UIViewController {
     @objc func back(sender: UIBarButtonItem) {
         
         
+        
         navigationController?.popViewController(animated: true)
     }
 

@@ -25,8 +25,7 @@ class FavoriteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-    navigationController?.navigationBar.shadowImage = UIImage()
+    
         
         SendFavoriteBtn.isEnabled = false
    
@@ -36,9 +35,18 @@ class FavoriteViewController: UIViewController {
         
        
         
-        navigationController?.navigationBar.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        self.navigationItem.hidesBackButton = true
+        let newBackButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: self, action: #selector(FavoriteViewController.back(sender:)))
+        
+        newBackButton.setBackgroundImage(#imageLiteral(resourceName: "Back"), for: .normal, barMetrics: .default)
+        self.navigationItem.leftBarButtonItem = newBackButton
 
 
+    }
+    
+    @objc func back(sender: UIBarButtonItem) {
+        
+        navigationController?.popViewController(animated: true)
     }
 
     @IBAction func SendFavoriteAction(_ sender: Any) {
@@ -65,7 +73,7 @@ extension FavoriteViewController: UICollectionViewDataSource{
         
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "favoritecell", for: indexPath) as! FavoriteCollectionViewCell
-        cell.FavoriteLB.text = String(indexPath.row)
+        cell.favoriteLB.text = String(indexPath.row)
         
         return cell
         
