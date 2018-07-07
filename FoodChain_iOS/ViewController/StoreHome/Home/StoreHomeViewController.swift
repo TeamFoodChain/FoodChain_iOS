@@ -13,41 +13,38 @@ class StoreHomeViewController: UIViewController {
 
 
   
-    
-    @IBOutlet weak var naviSearchTF: UITextField!
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        naviSearchTF.layer.borderWidth = 2.0
-        naviSearchTF.layer.borderColor = #colorLiteral(red: 0.2158766389, green: 0.6043385863, blue: 0.4158287644, alpha: 1)
-        naviSearchTF.layer.cornerRadius = 5
-        
-       
-        
-        
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+       navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         
       
         
         //- Pageview Library 코드
         let storyboard = UIStoryboard(name: "StoreHome", bundle: nil)
-        let firstViewController = storyboard.instantiateViewController(withIdentifier: "home")
+        
+        let firstViewController = storyboard.instantiateViewController(withIdentifier: "home") as! SHhomeViewController
+        
         let secondViewController = storyboard.instantiateViewController(withIdentifier: "timesale")
+        
         let thirdViewController = storyboard.instantiateViewController(withIdentifier: "market")
+        
         
         let pagingViewController = FixedPagingViewController(viewControllers: [
             firstViewController,
             secondViewController,
             thirdViewController
             ])
-        
-        
     
+        
+        
         
         addChildViewController(pagingViewController)
         view.addSubview(pagingViewController.view)
+        
         pagingViewController.didMove(toParentViewController: self)
         pagingViewController.view.translatesAutoresizingMaskIntoConstraints = false
        
@@ -67,11 +64,13 @@ class StoreHomeViewController: UIViewController {
             ])
         //
         
+       
         
-        
-
-        
+            
     }
+  
+    
+  
     
 
    

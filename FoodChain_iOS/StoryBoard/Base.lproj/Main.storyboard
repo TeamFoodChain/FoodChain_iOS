@@ -1419,6 +1419,9 @@
                                                 </fragment>
                                             </attributedString>
                                         </state>
+                                        <connections>
+                                            <segue destination="wqk-Wc-h1S" kind="push" id="pv1-KD-fft"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -1510,6 +1513,6 @@
         <image name="icon" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="l8h-9n-ulp"/>
+        <segue reference="pv1-KD-fft"/>
     </inferredMetricsTieBreakers>
 </document>

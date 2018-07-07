@@ -10,6 +10,8 @@
 		520FA11820EA2DB60087C2B8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 520FA11720EA2DB60087C2B8 /* Info.plist */; };
 		522A24F520EA646200D1C272 /* KakaoJoinModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A24F420EA646200D1C272 /* KakaoJoinModule.swift */; };
 		522B10CC20E9D1F70002386D /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522B10CB20E9D1F70002386D /* KakaoOpenSDK.framework */; };
+		522F55DB20F0EA960004A8FE /* SHhomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522F55DA20F0EA960004A8FE /* SHhomeDetailViewController.swift */; };
+		522F55E220F0F7300004A8FE /* SHcategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522F55E120F0F7300004A8FE /* SHcategoryViewController.swift */; };
 		525FCB8120EBAE9D0076C378 /* TermViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FCB8020EBAE9D0076C378 /* TermViewController.swift */; };
 		52634A8420EB39D60028A33E /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52634A8320EB39D60028A33E /* JoinViewController.swift */; };
 		52634A8720EB4C090028A33E /* KakaoJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52634A8620EB4C090028A33E /* KakaoJoinViewController.swift */; };
@@ -17,9 +19,11 @@
 		528E324320EC7E090082D52C /* KakaoOwnerJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E324220EC7E090082D52C /* KakaoOwnerJoinViewController.swift */; };
 		52996EE120EC1CAC00F33A6D /* OwnerJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52996EE020EC1CAC00F33A6D /* OwnerJoinViewController.swift */; };
 		52996EE320EC266500F33A6D /* SelectUsertypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52996EE220EC266500F33A6D /* SelectUsertypeViewController.swift */; };
+		52B5789B20F0A9E8008D551F /* SHADTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5789A20F0A9E8008D551F /* SHADTableViewCell.swift */; };
 		52C6D03B20ECC9D00050A7C8 /* SHhomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6D03A20ECC9D00050A7C8 /* SHhomeViewController.swift */; };
 		52C6D03D20ECF82E0050A7C8 /* SHtimesaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6D03C20ECF82E0050A7C8 /* SHtimesaleViewController.swift */; };
 		52C6D03F20ECF85B0050A7C8 /* SHmarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6D03E20ECF85B0050A7C8 /* SHmarketViewController.swift */; };
+		52CF7F9220EFA05700B3F13E /* SHhomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF7F9120EFA05700B3F13E /* SHhomeTableViewCell.swift */; };
 		52FBDED620E8765F00AEEB1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBDED520E8765F00AEEB1E /* AppDelegate.swift */; };
 		52FBDED820E8765F00AEEB1E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBDED720E8765F00AEEB1E /* LoginViewController.swift */; };
 		52FBDEDB20E8765F00AEEB1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FBDED920E8765F00AEEB1E /* Main.storyboard */; };
@@ -43,6 +47,8 @@
 		522A24F420EA646200D1C272 /* KakaoJoinModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoJoinModule.swift; sourceTree = "<group>"; };
 		522B10CB20E9D1F70002386D /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
 		522B10CE20E9D3FC0002386D /* KakaoOpenSDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KakaoOpenSDK-Bridging-Header.h"; sourceTree = "<group>"; };
+		522F55DA20F0EA960004A8FE /* SHhomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHhomeDetailViewController.swift; sourceTree = "<group>"; };
+		522F55E120F0F7300004A8FE /* SHcategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHcategoryViewController.swift; sourceTree = "<group>"; };
 		525FCB8020EBAE9D0076C378 /* TermViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermViewController.swift; sourceTree = "<group>"; };
 		52634A8320EB39D60028A33E /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		52634A8620EB4C090028A33E /* KakaoJoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoJoinViewController.swift; sourceTree = "<group>"; };
@@ -50,9 +56,11 @@
 		528E324220EC7E090082D52C /* KakaoOwnerJoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoOwnerJoinViewController.swift; sourceTree = "<group>"; };
 		52996EE020EC1CAC00F33A6D /* OwnerJoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerJoinViewController.swift; sourceTree = "<group>"; };
 		52996EE220EC266500F33A6D /* SelectUsertypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUsertypeViewController.swift; sourceTree = "<group>"; };
+		52B5789A20F0A9E8008D551F /* SHADTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHADTableViewCell.swift; sourceTree = "<group>"; };
 		52C6D03A20ECC9D00050A7C8 /* SHhomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHhomeViewController.swift; sourceTree = "<group>"; };
 		52C6D03C20ECF82E0050A7C8 /* SHtimesaleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHtimesaleViewController.swift; sourceTree = "<group>"; };
 		52C6D03E20ECF85B0050A7C8 /* SHmarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHmarketViewController.swift; sourceTree = "<group>"; };
+		52CF7F9120EFA05700B3F13E /* SHhomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHhomeTableViewCell.swift; sourceTree = "<group>"; };
 		52FBDED220E8765F00AEEB1E /* FoodChain_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodChain_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FBDED520E8765F00AEEB1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FBDED720E8765F00AEEB1E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +104,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		522F55DC20F0F2C80004A8FE /* main */ = {
+			isa = PBXGroup;
+			children = (
+				52C6D03A20ECC9D00050A7C8 /* SHhomeViewController.swift */,
+				52CF7F9120EFA05700B3F13E /* SHhomeTableViewCell.swift */,
+				52B5789A20F0A9E8008D551F /* SHADTableViewCell.swift */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		522F55DD20F0F2D40004A8FE /* category */ = {
+			isa = PBXGroup;
+			children = (
+				522F55E120F0F7300004A8FE /* SHcategoryViewController.swift */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		522F55DE20F0F2F00004A8FE /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				522F55DA20F0EA960004A8FE /* SHhomeDetailViewController.swift */,
+			);
+			path = detail;
+			sourceTree = "<group>";
+		};
 		525DBD0020EB389600935E46 /* Account */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +170,33 @@
 				52996EE020EC1CAC00F33A6D /* OwnerJoinViewController.swift */,
 			);
 			path = NativeJoin;
+			sourceTree = "<group>";
+		};
+		52CF7F8E20EF9FA400B3F13E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				52FBDEF520E88B3C00AEEB1E /* StoreHomeViewController.swift */,
+				522F55DE20F0F2F00004A8FE /* detail */,
+				522F55DD20F0F2D40004A8FE /* category */,
+				522F55DC20F0F2C80004A8FE /* main */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		52CF7F8F20EF9FAD00B3F13E /* TimeSale */ = {
+			isa = PBXGroup;
+			children = (
+				52C6D03C20ECF82E0050A7C8 /* SHtimesaleViewController.swift */,
+			);
+			path = TimeSale;
+			sourceTree = "<group>";
+		};
+		52CF7F9020EF9FBF00B3F13E /* Market */ = {
+			isa = PBXGroup;
+			children = (
+				52C6D03E20ECF85B0050A7C8 /* SHmarketViewController.swift */,
+			);
+			path = Market;
 			sourceTree = "<group>";
 		};
 		52FBDEC920E8765F00AEEB1E = {
@@ -240,9 +301,9 @@
 		52FBDF0220E8954C00AEEB1E /* StoreHome */ = {
 			isa = PBXGroup;
 			children = (
-				52FBDEF520E88B3C00AEEB1E /* StoreHomeViewController.swift */,
-				52C6D03C20ECF82E0050A7C8 /* SHtimesaleViewController.swift */,
-				52C6D03E20ECF85B0050A7C8 /* SHmarketViewController.swift */,
+				52CF7F9020EF9FBF00B3F13E /* Market */,
+				52CF7F8F20EF9FAD00B3F13E /* TimeSale */,
+				52CF7F8E20EF9FA400B3F13E /* Home */,
 			);
 			path = StoreHome;
 			sourceTree = "<group>";
@@ -257,7 +318,6 @@
 		52FBDF0420E8956B00AEEB1E /* Mypage */ = {
 			isa = PBXGroup;
 			children = (
-				52C6D03A20ECC9D00050A7C8 /* SHhomeViewController.swift */,
 			);
 			path = Mypage;
 			sourceTree = "<group>";
@@ -435,6 +495,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				522F55E220F0F7300004A8FE /* SHcategoryViewController.swift in Sources */,
 				52634A8720EB4C090028A33E /* KakaoJoinViewController.swift in Sources */,
 				52FBDEED20E87AC800AEEB1E /* Extension.swift in Sources */,
 				528E324120EC7CDB0082D52C /* KakaoSelectUsertypeViewController.swift in Sources */,
@@ -445,6 +506,7 @@
 				528E324320EC7E090082D52C /* KakaoOwnerJoinViewController.swift in Sources */,
 				52FBDF0920E8966F00AEEB1E /* FavoriteCollectionViewCell.swift in Sources */,
 				525FCB8120EBAE9D0076C378 /* TermViewController.swift in Sources */,
+				522F55DB20F0EA960004A8FE /* SHhomeDetailViewController.swift in Sources */,
 				52FBDED820E8765F00AEEB1E /* LoginViewController.swift in Sources */,
 				52C6D03D20ECF82E0050A7C8 /* SHtimesaleViewController.swift in Sources */,
 				52C6D03F20ECF85B0050A7C8 /* SHmarketViewController.swift in Sources */,
@@ -452,8 +514,10 @@
 				52996EE320EC266500F33A6D /* SelectUsertypeViewController.swift in Sources */,
 				522A24F520EA646200D1C272 /* KakaoJoinModule.swift in Sources */,
 				52634A8420EB39D60028A33E /* JoinViewController.swift in Sources */,
+				52B5789B20F0A9E8008D551F /* SHADTableViewCell.swift in Sources */,
 				52996EE120EC1CAC00F33A6D /* OwnerJoinViewController.swift in Sources */,
 				52FBDED620E8765F00AEEB1E /* AppDelegate.swift in Sources */,
+				52CF7F9220EFA05700B3F13E /* SHhomeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
