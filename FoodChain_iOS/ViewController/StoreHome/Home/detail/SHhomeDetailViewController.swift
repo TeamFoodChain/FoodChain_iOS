@@ -1,14 +1,14 @@
 //
-//  SHtimesaleViewController.swift
+//  SHhomeDetailViewController.swift
 //  FoodChain_iOS
 //
-//  Created by 신동규 on 2018. 7. 4..
+//  Created by 신동규 on 2018. 7. 7..
 //  Copyright © 2018년 신동규. All rights reserved.
 //
 
 import UIKit
 
-class SHtimesaleViewController: UIViewController {
+class SHhomeDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
