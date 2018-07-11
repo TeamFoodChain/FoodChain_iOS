@@ -94,14 +94,14 @@ class JoinViewController: UIViewController {
     
     @objc func isValid(){
         
-        if (nameTF.text?.isEmpty)! || (passTF.text?.isEmpty)! || (emailTF.text?.isEmpty)! || (passcomTF.text?.isEmpty)! || (numberTF.text?.isEmpty)! || emailCheck.image == UIImage(named: "Yes") || passCheck.image == UIImage(named: "Yes") || check == 0 {
+        if (nameTF.text?.isEmpty)! || (passTF.text?.isEmpty)! || (emailTF.text?.isEmpty)! || (passcomTF.text?.isEmpty)! || (numberTF.text?.isEmpty)! || passCheck.image == UIImage(named: "Yes") || check == 0 {
         
             JoinBtn.isEnabled = false
             JoinBtn.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
             
         }
         else {
-            if passCheck.image == UIImage(named: "Yes-Color") && passCheck.image == UIImage(named: "Yes-Color") && check == 1{
+            if passCheck.image == UIImage(named: "Yes-Color") && check == 1{
             
             JoinBtn.isEnabled = true
             JoinBtn.backgroundColor = #colorLiteral(red: 0.2158766389, green: 0.6043385863, blue: 0.4158287644, alpha: 1)
@@ -132,10 +132,26 @@ class JoinViewController: UIViewController {
     }
     
     @IBAction func JoinAction(_ sender: Any) {
+        let join = JoinNM()
+        join.nativeCustomerJoin(user_pw_check: gsno(passcomTF.text), user_pw: gsno(passcomTF.text), user_name: gsno(nameTF.text), user_email: gsno(emailTF.text), user_phone: gsno(numberTF.text)) { [weak self](Join) in
+            
+            if Join.message == "success signup"{
+                let mainview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbarview") as! TabBarViewController
+                
+                self?.present(mainview, animated: true, completion: nil)
+           
+            }
+            else{
+                let alertController = UIAlertController(title: "",message: "네트워크 문제입니다.", preferredStyle: UIAlertControllerStyle.alert)
+                let cancelButton = UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: nil)
+                alertController.addAction(cancelButton)
+                self?.present(alertController,animated: true,completion: nil)
+                
+                
+            }
+            
+        }
         
-        let mainview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "favoriteview")
-        
-        navigationController?.pushViewController(mainview, animated: true)
     }
     
     

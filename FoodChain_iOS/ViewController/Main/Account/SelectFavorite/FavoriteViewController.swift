@@ -13,7 +13,7 @@ import UIKit
 class FavoriteViewController: UIViewController {
     
 
-    var estimateWidth = 160.0
+    var estimateWidth = 106.0
     var cellMarginSize = 10.0
     var selectcount:Int  = 0
     
@@ -51,9 +51,8 @@ class FavoriteViewController: UIViewController {
 
     @IBAction func SendFavoriteAction(_ sender: Any) {
         
-        let mainview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbarview") as! TabBarViewController
-        
-        present(mainview, animated: true, completion: nil)
+       
+        navigationController?.popViewController(animated: true)
         
         
     }
@@ -64,7 +63,7 @@ class FavoriteViewController: UIViewController {
 extension FavoriteViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 10
+        return 15
         
         
     }
@@ -104,8 +103,7 @@ extension FavoriteViewController: UICollectionViewDataSource{
 }
 extension FavoriteViewController: UICollectionViewDelegateFlowLayout{
     
-   
-    
+  
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = self.calculateWith()
         return CGSize(width: width, height: width)

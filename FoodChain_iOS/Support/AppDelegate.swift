@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import GoogleMaps
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
         
+
         KOSession.isKakaoAccountLoginCallback(url)
         
         return KOSession.handleOpen(url)
@@ -34,6 +37,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        GMSServices.provideAPIKey("AIzaSyD91nnqjxPACv0e1t69sumj7haHpSLAOgY")
+        GMSPlacesClient.provideAPIKey("AIzaSyD91nnqjxPACv0e1t69sumj7haHpSLAOgY")
         // Override point for customization after application launch.
         return true
     }

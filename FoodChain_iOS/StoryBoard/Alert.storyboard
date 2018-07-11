@@ -30,8 +30,9 @@
         <scene sceneID="XKH-MP-z0l">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7gv-uU-Vit" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="alarmIconGroup" id="m5W-pl-YR3"/>
+                    <tabBarItem key="tabBarItem" title="" image="alarmIconGroup" id="He5-pu-q8d"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JJp-Ao-nfr">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

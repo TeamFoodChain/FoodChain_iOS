@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="detailCell" rowHeight="466" id="KGk-i7-Jjw" customClass="SHhomeDetailTableViewCell" customModule="FoodChain_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="466"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="465.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sellerPic" translatesAutoresizingMaskIntoConstraints="NO" id="ATV-Mc-lhx">
+                        <rect key="frame" x="18" y="33" width="25" height="25"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상호명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqd-4y-2hj">
+                        <rect key="frame" x="49" y="43.5" width="31.5" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일 남은 상품" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UeJ-ET-i3N">
+                        <rect key="frame" x="298" y="43.5" width="59" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyf-PG-DUu">
+                        <rect key="frame" x="271" y="43.5" width="21" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.98431372549999996" green="0.47450980390000003" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qu6-cR-wQi">
+                        <rect key="frame" x="18" y="68" width="21" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="거리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6d-DP-pda">
+                        <rect key="frame" x="336" y="68" width="21" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="runIconSmall" translatesAutoresizingMaskIntoConstraints="NO" id="rWM-5r-ZLb">
+                        <rect key="frame" x="313" y="67" width="15" height="15"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDI-s2-fsr">
+                        <rect key="frame" x="0.0" y="90.5" width="375" height="375"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="nDI-s2-fsr" secondAttribute="height" multiplier="1:1" id="2LV-s8-WVf"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="lyf-PG-DUu" firstAttribute="bottom" secondItem="UeJ-ET-i3N" secondAttribute="bottom" id="26F-3R-ufP"/>
+                    <constraint firstItem="Qqd-4y-2hj" firstAttribute="leading" secondItem="ATV-Mc-lhx" secondAttribute="trailing" constant="6" id="3jD-Ik-ffK"/>
+                    <constraint firstItem="nDI-s2-fsr" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="6Bg-jR-kzM"/>
+                    <constraint firstItem="Z6d-DP-pda" firstAttribute="trailing" secondItem="UeJ-ET-i3N" secondAttribute="trailing" id="9Ru-Sh-Pdx"/>
+                    <constraint firstItem="Qu6-cR-wQi" firstAttribute="leading" secondItem="ATV-Mc-lhx" secondAttribute="leading" id="9Vv-tG-t6K"/>
+                    <constraint firstItem="nDI-s2-fsr" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="Eaw-rg-e5C"/>
+                    <constraint firstItem="nDI-s2-fsr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="FLE-F5-Xk8"/>
+                    <constraint firstItem="lyf-PG-DUu" firstAttribute="bottom" secondItem="Qqd-4y-2hj" secondAttribute="bottom" id="PWp-H5-R67"/>
+                    <constraint firstItem="Qqd-4y-2hj" firstAttribute="bottom" secondItem="ATV-Mc-lhx" secondAttribute="bottom" id="WC1-6A-kTJ"/>
+                    <constraint firstItem="Qu6-cR-wQi" firstAttribute="top" secondItem="ATV-Mc-lhx" secondAttribute="bottom" constant="10" id="WV2-ll-9mP"/>
+                    <constraint firstAttribute="trailing" secondItem="nDI-s2-fsr" secondAttribute="trailing" id="X8w-vh-rL8"/>
+                    <constraint firstItem="nDI-s2-fsr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="90.5" id="dtc-1E-lm4"/>
+                    <constraint firstItem="nDI-s2-fsr" firstAttribute="top" secondItem="Qu6-cR-wQi" secondAttribute="bottom" constant="8" id="eLy-QL-iuZ"/>
+                    <constraint firstItem="Z6d-DP-pda" firstAttribute="top" secondItem="UeJ-ET-i3N" secondAttribute="bottom" constant="10" id="eTX-yY-eZD"/>
+                    <constraint firstAttribute="trailing" secondItem="UeJ-ET-i3N" secondAttribute="trailing" constant="18" id="gCr-Z5-LOH"/>
+                    <constraint firstItem="Z6d-DP-pda" firstAttribute="leading" secondItem="rWM-5r-ZLb" secondAttribute="trailing" constant="8" id="iJb-og-Ijm"/>
+                    <constraint firstItem="rWM-5r-ZLb" firstAttribute="bottom" secondItem="Z6d-DP-pda" secondAttribute="bottom" id="jLI-oz-Bc8"/>
+                    <constraint firstItem="lyf-PG-DUu" firstAttribute="centerY" secondItem="UeJ-ET-i3N" secondAttribute="centerY" id="mLN-m8-T5J"/>
+                    <constraint firstItem="UeJ-ET-i3N" firstAttribute="leading" secondItem="lyf-PG-DUu" secondAttribute="trailing" constant="6" id="ppq-d3-hcw"/>
+                    <constraint firstItem="lyf-PG-DUu" firstAttribute="top" secondItem="Qqd-4y-2hj" secondAttribute="top" id="qIa-Zh-G7K"/>
+                    <constraint firstItem="lyf-PG-DUu" firstAttribute="centerY" secondItem="Qqd-4y-2hj" secondAttribute="centerY" id="s54-Ia-1uy"/>
+                    <constraint firstAttribute="bottom" secondItem="nDI-s2-fsr" secondAttribute="bottom" id="s5y-pa-7aO"/>
+                    <constraint firstItem="ATV-Mc-lhx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="33" id="uvU-Bj-bJZ"/>
+                    <constraint firstItem="ATV-Mc-lhx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="wid-am-qpa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="adressLB" destination="Qu6-cR-wQi" id="uje-75-0Ty"/>
+                <outlet property="datenumLB" destination="lyf-PG-DUu" id="14e-Xd-1N1"/>
+                <outlet property="distanceLB" destination="Z6d-DP-pda" id="nFC-HN-iS2"/>
+                <outlet property="mapview" destination="nDI-s2-fsr" id="ke9-ug-dQL"/>
+                <outlet property="shopImg" destination="ATV-Mc-lhx" id="dPZ-Xw-OT8"/>
+                <outlet property="shopnameLB" destination="Qqd-4y-2hj" id="boV-eZ-LFQ"/>
+            </connections>
+            <point key="canvasLocation" x="47.5" y="260"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="runIconSmall" width="15" height="15"/>
+        <image name="sellerPic" width="25" height="25"/>
+    </resources>
+</document>

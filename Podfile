@@ -16,4 +16,5 @@ target 'FoodChain_iOS' do
     pod 'AlamofireObjectMapper'
     pod	'ObjectMapper'
     pod 'Parchment'
+   
 end
