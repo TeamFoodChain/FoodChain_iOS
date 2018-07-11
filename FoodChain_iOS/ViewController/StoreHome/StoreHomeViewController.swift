@@ -12,8 +12,7 @@ import Parchment
 class StoreHomeViewController: UIViewController {
 
 
-  
-   
+    var insetFavorite :Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,14 +20,23 @@ class StoreHomeViewController: UIViewController {
        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         
-      
+       
+        if insetFavorite == 0{
+            
+            let favoriteView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "favoriteview")
+            
+            navigationController?.pushViewController(favoriteView, animated: true)
+            
+        }
+
+        
         
         //- Pageview Library 코드
         let storyboard = UIStoryboard(name: "StoreHome", bundle: nil)
         
         let firstViewController = storyboard.instantiateViewController(withIdentifier: "home") as! SHhomeViewController
         
-        let secondViewController = storyboard.instantiateViewController(withIdentifier: "timesale")
+        let secondViewController = storyboard.instantiateViewController(withIdentifier: "timesale") as! SHtimesaleViewController
         
         let thirdViewController = storyboard.instantiateViewController(withIdentifier: "market")
         
@@ -76,4 +84,5 @@ class StoreHomeViewController: UIViewController {
    
 
 }
+
 

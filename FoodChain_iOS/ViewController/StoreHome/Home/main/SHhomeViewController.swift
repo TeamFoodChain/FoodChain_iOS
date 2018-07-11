@@ -56,25 +56,46 @@ class SHhomeViewController: UIViewController ,UIScrollViewDelegate{
 
     @IBAction func Btn1Action(_ sender: Any) {
         
+        gotoCategory()
+ 
+    }
+    @IBAction func Btn2Action(_ sender: Any) {
+         gotoCategory()
+    }
+    @IBAction func Btn3Action(_ sender: Any) {
+         gotoCategory()
+    }
+    
+    @IBAction func Btn4Action(_ sender: Any) {
+         gotoCategory()
+    }
+    @IBAction func Btn5Action(_ sender: Any) {
+         gotoCategory()
+    }
+    @IBAction func Btn6Action(_ sender: Any) {
+         gotoCategory()
+    }
+    @IBAction func Btn7Action(_ sender: Any) {
+         gotoCategory()
+    }
+    
+    @IBAction func Btn8Action(_ sender: Any) {
+         gotoCategory()
+    }
+    
+    func gotoCategory(){
         let nextview = UIStoryboard.init(name: "StoreHome", bundle: nil).instantiateViewController(withIdentifier: "categoryView") as! SHcategoryViewController
-        StoreHomeViewController().navigationController?.pushViewController(nextview, animated: true)
-
         addChildViewController(nextview)
-
-//        UIView.transition(with: self.view, duration: 0.5, options: UIViewAnimationOptions.transitionFlipFromBottom, animations: {self.view.addSubview(nextview.view)}, completion: nil)
-   
         let transition = CATransition()
         transition.duration = 0.5
         transition.type = kCATransitionPush
         transition.subtype = kCATransitionFromRight
         transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
         nextview.view.layer.add(transition, forKey: kCATransition)
-        view.addSubview(nextview.view)
-    
-//        UIView.animate(withDuration: 0.4, delay: 0.0, options: [], animations: {self.view.addSubview(nextview.view)}
-//        , completion: nil)
+        nextview.view.frame.size.height = view.frame.height
+        self.view.addSubview(nextview.view)
+        
     }
-    
     
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {

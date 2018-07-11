@@ -17,6 +17,8 @@ class KakaoSelectUsertypeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print(kakaoUserId)
+        print(KakaoNickname)
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         
@@ -26,6 +28,22 @@ class KakaoSelectUsertypeViewController: UIViewController {
         newBackButton.setBackgroundImage(#imageLiteral(resourceName: "Back"), for: .normal, barMetrics: .default)
         self.navigationItem.leftBarButtonItem = newBackButton
         
+    }
+    @IBAction func kakaojoin1(_ sender: Any) {
+        let kakaoCustomerJoinview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "kakaocustomerjoinView") as! KakaoJoinViewController
+        kakaoCustomerJoinview.KakaoNickname = KakaoNickname
+        kakaoCustomerJoinview.kakaoUserId = kakaoUserId
+        navigationController?.pushViewController(kakaoCustomerJoinview, animated: true)
+        
+      
+        
+    }
+   
+    @IBAction func kakaojoin2(_ sender: Any) {
+        let kakaoCompanyJoinview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "kakaocompanyjoinView") as! KakaoOwnerJoinViewController
+        kakaoCompanyJoinview.KakaoNickname = KakaoNickname
+        kakaoCompanyJoinview.kakaoUserId = kakaoUserId
+        navigationController?.pushViewController(kakaoCompanyJoinview, animated: true)
     }
     
     @objc func back(sender: UIBarButtonItem) {

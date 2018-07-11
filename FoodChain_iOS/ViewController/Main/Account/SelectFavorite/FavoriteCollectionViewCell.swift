@@ -20,7 +20,7 @@ class FavoriteCollectionViewCell: UICollectionViewCell {
         
     }
     
-    var count = 0
+    
     override var isSelected: Bool {
         didSet {
             if isSelected { // Selected cell

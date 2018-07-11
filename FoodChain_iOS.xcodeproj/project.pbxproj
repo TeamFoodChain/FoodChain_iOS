@@ -12,16 +12,55 @@
 		522B10CC20E9D1F70002386D /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522B10CB20E9D1F70002386D /* KakaoOpenSDK.framework */; };
 		522F55DB20F0EA960004A8FE /* SHhomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522F55DA20F0EA960004A8FE /* SHhomeDetailViewController.swift */; };
 		522F55E220F0F7300004A8FE /* SHcategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522F55E120F0F7300004A8FE /* SHcategoryViewController.swift */; };
+		523553E820F3292900BA50DA /* MyRefrigeratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523553E720F3292900BA50DA /* MyRefrigeratorViewController.swift */; };
+		523553EA20F3313D00BA50DA /* ExdateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523553E920F3313D00BA50DA /* ExdateTableViewCell.swift */; };
+		523553EC20F3314D00BA50DA /* UploadstoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523553EB20F3314D00BA50DA /* UploadstoreTableViewCell.swift */; };
+		523553EE20F33CA600BA50DA /* ExdateEmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523553ED20F33CA600BA50DA /* ExdateEmptyTableViewCell.swift */; };
+		523553F020F3438C00BA50DA /* UploadstoreEmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523553EF20F3438C00BA50DA /* UploadstoreEmptyTableViewCell.swift */; };
+		523553F220F3789800BA50DA /* MFregisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523553F120F3789800BA50DA /* MFregisterViewController.swift */; };
+		523EEE1820F45A3E00A87F9E /* MFregister2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EEE1720F45A3E00A87F9E /* MFregister2ViewController.swift */; };
+		523EEE1A20F4877C00A87F9E /* SHtimesaleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EEE1920F4877C00A87F9E /* SHtimesaleTableViewCell.swift */; };
+		523EEE1C20F489B800A87F9E /* SHtimesaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EEE1B20F489B800A87F9E /* SHtimesaleViewController.swift */; };
+		5258A6B820F29372006C696B /* SHhomeDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258A6B620F29372006C696B /* SHhomeDetailTableViewCell.swift */; };
 		525FCB8120EBAE9D0076C378 /* TermViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FCB8020EBAE9D0076C378 /* TermViewController.swift */; };
 		52634A8420EB39D60028A33E /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52634A8320EB39D60028A33E /* JoinViewController.swift */; };
 		52634A8720EB4C090028A33E /* KakaoJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52634A8620EB4C090028A33E /* KakaoJoinViewController.swift */; };
+		52634FE120F5C04E00C0673E /* JoinNM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52634FE020F5C04E00C0673E /* JoinNM.swift */; };
+		52634FE620F5C10300C0673E /* NetworkDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52634FE520F5C10300C0673E /* NetworkDelegate.swift */; };
+		52634FE820F5C2EC00C0673E /* Join.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52634FE720F5C2EC00C0673E /* Join.swift */; };
+		52634FEA20F5FA0300C0673E /* SearchAddressNM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52634FE920F5FA0300C0673E /* SearchAddressNM.swift */; };
+		52634FF220F6007900C0673E /* SearchAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52634FEE20F6007900C0673E /* SearchAddress.swift */; };
+		52634FF320F6007900C0673E /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52634FEF20F6007900C0673E /* Common.swift */; };
+		52634FF420F6007900C0673E /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52634FF020F6007900C0673E /* Results.swift */; };
+		52634FF520F6007900C0673E /* Juso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52634FF120F6007900C0673E /* Juso.swift */; };
+		52634FF720F6047700C0673E /* SearchAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52634FF620F6047700C0673E /* SearchAdViewController.swift */; };
+		52634FF920F6049700C0673E /* SearchAdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52634FF820F6049700C0673E /* SearchAdTableViewCell.swift */; };
+		52755B6D20F2C0FD009453A7 /* SHhomeDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52755B6C20F2C0FD009453A7 /* SHhomeDetailTableViewCell.xib */; };
+		52755B7520F2D966009453A7 /* SHhomeMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52755B7420F2D966009453A7 /* SHhomeMenuCollectionViewCell.swift */; };
+		52755B7720F2DF08009453A7 /* SHhomeMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52755B7620F2DF08009453A7 /* SHhomeMenuTableViewCell.swift */; };
+		52755B7E20F2FC63009453A7 /* UploadstoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52755B7D20F2FC63009453A7 /* UploadstoreViewController.swift */; };
+		52755B8020F2FC71009453A7 /* ExdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52755B7F20F2FC71009453A7 /* ExdateViewController.swift */; };
+		528A516F20F52CF300DB39FC /* SHmarketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A516E20F52CF300DB39FC /* SHmarketTableViewCell.swift */; };
+		528A517120F52FB300DB39FC /* SHmarketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A517020F52FB300DB39FC /* SHmarketCollectionViewCell.swift */; };
+		528A517620F533DA00DB39FC /* DefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A517420F533DA00DB39FC /* DefaultTableViewCell.swift */; };
+		528A517720F533DA00DB39FC /* DefaultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 528A517520F533DA00DB39FC /* DefaultTableViewCell.xib */; };
 		528E324120EC7CDB0082D52C /* KakaoSelectUsertypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E324020EC7CDB0082D52C /* KakaoSelectUsertypeViewController.swift */; };
 		528E324320EC7E090082D52C /* KakaoOwnerJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E324220EC7E090082D52C /* KakaoOwnerJoinViewController.swift */; };
+		529893DC20F2553300191DA6 /* SHcategoryHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529893DB20F2553300191DA6 /* SHcategoryHeaderCollectionReusableView.swift */; };
 		52996EE120EC1CAC00F33A6D /* OwnerJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52996EE020EC1CAC00F33A6D /* OwnerJoinViewController.swift */; };
 		52996EE320EC266500F33A6D /* SelectUsertypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52996EE220EC266500F33A6D /* SelectUsertypeViewController.swift */; };
+		52B5437320F658F300C64E51 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5436B20F658F300C64E51 /* Geometry.swift */; };
+		52B5437420F658F300C64E51 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5436C20F658F300C64E51 /* Location.swift */; };
+		52B5437520F658F300C64E51 /* Northeast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5436D20F658F300C64E51 /* Northeast.swift */; };
+		52B5437620F658F300C64E51 /* Geocoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5436E20F658F300C64E51 /* Geocoding.swift */; };
+		52B5437720F658F300C64E51 /* Viewport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5436F20F658F300C64E51 /* Viewport.swift */; };
+		52B5437820F658F300C64E51 /* GeoResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5437020F658F300C64E51 /* GeoResults.swift */; };
+		52B5437920F658F300C64E51 /* Address_components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5437120F658F300C64E51 /* Address_components.swift */; };
+		52B5437A20F658F300C64E51 /* Southwest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5437220F658F300C64E51 /* Southwest.swift */; };
+		52B5437C20F6985700C64E51 /* LoginNM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5437B20F6985700C64E51 /* LoginNM.swift */; };
 		52B5789B20F0A9E8008D551F /* SHADTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5789A20F0A9E8008D551F /* SHADTableViewCell.swift */; };
+		52B782AE20F16E9D00F1E51A /* SHcategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B782AD20F16E9D00F1E51A /* SHcategoryCollectionViewCell.swift */; };
 		52C6D03B20ECC9D00050A7C8 /* SHhomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6D03A20ECC9D00050A7C8 /* SHhomeViewController.swift */; };
-		52C6D03D20ECF82E0050A7C8 /* SHtimesaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6D03C20ECF82E0050A7C8 /* SHtimesaleViewController.swift */; };
 		52C6D03F20ECF85B0050A7C8 /* SHmarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6D03E20ECF85B0050A7C8 /* SHmarketViewController.swift */; };
 		52CF7F9220EFA05700B3F13E /* SHhomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF7F9120EFA05700B3F13E /* SHhomeTableViewCell.swift */; };
 		52FBDED620E8765F00AEEB1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBDED520E8765F00AEEB1E /* AppDelegate.swift */; };
@@ -30,7 +69,6 @@
 		52FBDEDD20E8766000AEEB1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52FBDEDC20E8766000AEEB1E /* Assets.xcassets */; };
 		52FBDEE020E8766000AEEB1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FBDEDE20E8766000AEEB1E /* LaunchScreen.storyboard */; };
 		52FBDEED20E87AC800AEEB1E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBDEEC20E87AC800AEEB1E /* Extension.swift */; };
-		52FBDEF020E87D2A00AEEB1E /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBDEEF20E87D2A00AEEB1E /* APIRouter.swift */; };
 		52FBDEF420E8897800AEEB1E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBDEF320E8897800AEEB1E /* TabBarViewController.swift */; };
 		52FBDEF620E88B3C00AEEB1E /* StoreHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBDEF520E88B3C00AEEB1E /* StoreHomeViewController.swift */; };
 		52FBDEFA20E8929D00AEEB1E /* StoreHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FBDEF920E8929D00AEEB1E /* StoreHome.storyboard */; };
@@ -49,16 +87,55 @@
 		522B10CE20E9D3FC0002386D /* KakaoOpenSDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KakaoOpenSDK-Bridging-Header.h"; sourceTree = "<group>"; };
 		522F55DA20F0EA960004A8FE /* SHhomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHhomeDetailViewController.swift; sourceTree = "<group>"; };
 		522F55E120F0F7300004A8FE /* SHcategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHcategoryViewController.swift; sourceTree = "<group>"; };
+		523553E720F3292900BA50DA /* MyRefrigeratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRefrigeratorViewController.swift; sourceTree = "<group>"; };
+		523553E920F3313D00BA50DA /* ExdateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExdateTableViewCell.swift; sourceTree = "<group>"; };
+		523553EB20F3314D00BA50DA /* UploadstoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadstoreTableViewCell.swift; sourceTree = "<group>"; };
+		523553ED20F33CA600BA50DA /* ExdateEmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExdateEmptyTableViewCell.swift; sourceTree = "<group>"; };
+		523553EF20F3438C00BA50DA /* UploadstoreEmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadstoreEmptyTableViewCell.swift; sourceTree = "<group>"; };
+		523553F120F3789800BA50DA /* MFregisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFregisterViewController.swift; sourceTree = "<group>"; };
+		523EEE1720F45A3E00A87F9E /* MFregister2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFregister2ViewController.swift; sourceTree = "<group>"; };
+		523EEE1920F4877C00A87F9E /* SHtimesaleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHtimesaleTableViewCell.swift; sourceTree = "<group>"; };
+		523EEE1B20F489B800A87F9E /* SHtimesaleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHtimesaleViewController.swift; sourceTree = "<group>"; };
+		5258A6B620F29372006C696B /* SHhomeDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHhomeDetailTableViewCell.swift; sourceTree = "<group>"; };
 		525FCB8020EBAE9D0076C378 /* TermViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermViewController.swift; sourceTree = "<group>"; };
 		52634A8320EB39D60028A33E /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		52634A8620EB4C090028A33E /* KakaoJoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoJoinViewController.swift; sourceTree = "<group>"; };
+		52634FE020F5C04E00C0673E /* JoinNM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinNM.swift; sourceTree = "<group>"; };
+		52634FE520F5C10300C0673E /* NetworkDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDelegate.swift; sourceTree = "<group>"; };
+		52634FE720F5C2EC00C0673E /* Join.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Join.swift; sourceTree = "<group>"; };
+		52634FE920F5FA0300C0673E /* SearchAddressNM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressNM.swift; sourceTree = "<group>"; };
+		52634FEE20F6007900C0673E /* SearchAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAddress.swift; sourceTree = "<group>"; };
+		52634FEF20F6007900C0673E /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		52634FF020F6007900C0673E /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		52634FF120F6007900C0673E /* Juso.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Juso.swift; sourceTree = "<group>"; };
+		52634FF620F6047700C0673E /* SearchAdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAdViewController.swift; sourceTree = "<group>"; };
+		52634FF820F6049700C0673E /* SearchAdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAdTableViewCell.swift; sourceTree = "<group>"; };
+		52755B6C20F2C0FD009453A7 /* SHhomeDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHhomeDetailTableViewCell.xib; sourceTree = "<group>"; };
+		52755B7420F2D966009453A7 /* SHhomeMenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHhomeMenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		52755B7620F2DF08009453A7 /* SHhomeMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHhomeMenuTableViewCell.swift; sourceTree = "<group>"; };
+		52755B7D20F2FC63009453A7 /* UploadstoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadstoreViewController.swift; sourceTree = "<group>"; };
+		52755B7F20F2FC71009453A7 /* ExdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExdateViewController.swift; sourceTree = "<group>"; };
+		528A516E20F52CF300DB39FC /* SHmarketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHmarketTableViewCell.swift; sourceTree = "<group>"; };
+		528A517020F52FB300DB39FC /* SHmarketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHmarketCollectionViewCell.swift; sourceTree = "<group>"; };
+		528A517420F533DA00DB39FC /* DefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTableViewCell.swift; sourceTree = "<group>"; };
+		528A517520F533DA00DB39FC /* DefaultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultTableViewCell.xib; sourceTree = "<group>"; };
 		528E324020EC7CDB0082D52C /* KakaoSelectUsertypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoSelectUsertypeViewController.swift; sourceTree = "<group>"; };
 		528E324220EC7E090082D52C /* KakaoOwnerJoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoOwnerJoinViewController.swift; sourceTree = "<group>"; };
+		529893DB20F2553300191DA6 /* SHcategoryHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHcategoryHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		52996EE020EC1CAC00F33A6D /* OwnerJoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerJoinViewController.swift; sourceTree = "<group>"; };
 		52996EE220EC266500F33A6D /* SelectUsertypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUsertypeViewController.swift; sourceTree = "<group>"; };
+		52B5436B20F658F300C64E51 /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
+		52B5436C20F658F300C64E51 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		52B5436D20F658F300C64E51 /* Northeast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Northeast.swift; sourceTree = "<group>"; };
+		52B5436E20F658F300C64E51 /* Geocoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geocoding.swift; sourceTree = "<group>"; };
+		52B5436F20F658F300C64E51 /* Viewport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Viewport.swift; sourceTree = "<group>"; };
+		52B5437020F658F300C64E51 /* GeoResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoResults.swift; sourceTree = "<group>"; };
+		52B5437120F658F300C64E51 /* Address_components.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address_components.swift; sourceTree = "<group>"; };
+		52B5437220F658F300C64E51 /* Southwest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Southwest.swift; sourceTree = "<group>"; };
+		52B5437B20F6985700C64E51 /* LoginNM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNM.swift; sourceTree = "<group>"; };
 		52B5789A20F0A9E8008D551F /* SHADTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHADTableViewCell.swift; sourceTree = "<group>"; };
+		52B782AD20F16E9D00F1E51A /* SHcategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHcategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		52C6D03A20ECC9D00050A7C8 /* SHhomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHhomeViewController.swift; sourceTree = "<group>"; };
-		52C6D03C20ECF82E0050A7C8 /* SHtimesaleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHtimesaleViewController.swift; sourceTree = "<group>"; };
 		52C6D03E20ECF85B0050A7C8 /* SHmarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHmarketViewController.swift; sourceTree = "<group>"; };
 		52CF7F9120EFA05700B3F13E /* SHhomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHhomeTableViewCell.swift; sourceTree = "<group>"; };
 		52FBDED220E8765F00AEEB1E /* FoodChain_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodChain_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,7 +145,6 @@
 		52FBDEDC20E8766000AEEB1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52FBDEDF20E8766000AEEB1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52FBDEEC20E87AC800AEEB1E /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		52FBDEEF20E87D2A00AEEB1E /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		52FBDEF320E8897800AEEB1E /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		52FBDEF520E88B3C00AEEB1E /* StoreHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreHomeViewController.swift; sourceTree = "<group>"; };
 		52FBDEF920E8929D00AEEB1E /* StoreHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoreHome.storyboard; sourceTree = "<group>"; };
@@ -118,6 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				522F55E120F0F7300004A8FE /* SHcategoryViewController.swift */,
+				52B782AD20F16E9D00F1E51A /* SHcategoryCollectionViewCell.swift */,
+				529893DB20F2553300191DA6 /* SHcategoryHeaderCollectionReusableView.swift */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -126,6 +204,10 @@
 			isa = PBXGroup;
 			children = (
 				522F55DA20F0EA960004A8FE /* SHhomeDetailViewController.swift */,
+				5258A6B620F29372006C696B /* SHhomeDetailTableViewCell.swift */,
+				52755B6C20F2C0FD009453A7 /* SHhomeDetailTableViewCell.xib */,
+				52755B7620F2DF08009453A7 /* SHhomeMenuTableViewCell.swift */,
+				52755B7420F2D966009453A7 /* SHhomeMenuCollectionViewCell.swift */,
 			);
 			path = detail;
 			sourceTree = "<group>";
@@ -139,6 +221,8 @@
 				528E324520EC82FD0082D52C /* NativeJoin */,
 				528E324420EC82D10082D52C /* KakaoJoin */,
 				52634A8820EB50750028A33E /* SelectFavorite */,
+				52634FF620F6047700C0673E /* SearchAdViewController.swift */,
+				52634FF820F6049700C0673E /* SearchAdTableViewCell.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -150,6 +234,68 @@
 				52FBDF0820E8966F00AEEB1E /* FavoriteCollectionViewCell.swift */,
 			);
 			path = SelectFavorite;
+			sourceTree = "<group>";
+		};
+		52634FDA20F5BCAA00C0673E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52634FDB20F5BCDD00C0673E /* Object */,
+				52FBDEEE20E87D1800AEEB1E /* Network */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52634FDB20F5BCDD00C0673E /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				52B5436A20F658F300C64E51 /* Geoconding */,
+				52634FED20F6007900C0673E /* SearchAddress */,
+				52634FE720F5C2EC00C0673E /* Join.swift */,
+			);
+			path = Object;
+			sourceTree = "<group>";
+		};
+		52634FED20F6007900C0673E /* SearchAddress */ = {
+			isa = PBXGroup;
+			children = (
+				52634FEE20F6007900C0673E /* SearchAddress.swift */,
+				52634FEF20F6007900C0673E /* Common.swift */,
+				52634FF020F6007900C0673E /* Results.swift */,
+				52634FF120F6007900C0673E /* Juso.swift */,
+			);
+			path = SearchAddress;
+			sourceTree = "<group>";
+		};
+		52755B7820F2FB38009453A7 /* MyRefrigerator */ = {
+			isa = PBXGroup;
+			children = (
+				523553E720F3292900BA50DA /* MyRefrigeratorViewController.swift */,
+				523553F120F3789800BA50DA /* MFregisterViewController.swift */,
+				523EEE1720F45A3E00A87F9E /* MFregister2ViewController.swift */,
+				52755B7C20F2FC4F009453A7 /* uploadstore */,
+				52755B7B20F2FC46009453A7 /* exdate */,
+			);
+			path = MyRefrigerator;
+			sourceTree = "<group>";
+		};
+		52755B7B20F2FC46009453A7 /* exdate */ = {
+			isa = PBXGroup;
+			children = (
+				52755B7F20F2FC71009453A7 /* ExdateViewController.swift */,
+				523553E920F3313D00BA50DA /* ExdateTableViewCell.swift */,
+				523553ED20F33CA600BA50DA /* ExdateEmptyTableViewCell.swift */,
+			);
+			path = exdate;
+			sourceTree = "<group>";
+		};
+		52755B7C20F2FC4F009453A7 /* uploadstore */ = {
+			isa = PBXGroup;
+			children = (
+				52755B7D20F2FC63009453A7 /* UploadstoreViewController.swift */,
+				523553EB20F3314D00BA50DA /* UploadstoreTableViewCell.swift */,
+				523553EF20F3438C00BA50DA /* UploadstoreEmptyTableViewCell.swift */,
+			);
+			path = uploadstore;
 			sourceTree = "<group>";
 		};
 		528E324420EC82D10082D52C /* KakaoJoin */ = {
@@ -172,13 +318,27 @@
 			path = NativeJoin;
 			sourceTree = "<group>";
 		};
+		52B5436A20F658F300C64E51 /* Geoconding */ = {
+			isa = PBXGroup;
+			children = (
+				52B5436B20F658F300C64E51 /* Geometry.swift */,
+				52B5436C20F658F300C64E51 /* Location.swift */,
+				52B5436D20F658F300C64E51 /* Northeast.swift */,
+				52B5436E20F658F300C64E51 /* Geocoding.swift */,
+				52B5436F20F658F300C64E51 /* Viewport.swift */,
+				52B5437020F658F300C64E51 /* GeoResults.swift */,
+				52B5437120F658F300C64E51 /* Address_components.swift */,
+				52B5437220F658F300C64E51 /* Southwest.swift */,
+			);
+			path = Geoconding;
+			sourceTree = "<group>";
+		};
 		52CF7F8E20EF9FA400B3F13E /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				52FBDEF520E88B3C00AEEB1E /* StoreHomeViewController.swift */,
+				522F55DC20F0F2C80004A8FE /* main */,
 				522F55DE20F0F2F00004A8FE /* detail */,
 				522F55DD20F0F2D40004A8FE /* category */,
-				522F55DC20F0F2C80004A8FE /* main */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -186,7 +346,8 @@
 		52CF7F8F20EF9FAD00B3F13E /* TimeSale */ = {
 			isa = PBXGroup;
 			children = (
-				52C6D03C20ECF82E0050A7C8 /* SHtimesaleViewController.swift */,
+				523EEE1920F4877C00A87F9E /* SHtimesaleTableViewCell.swift */,
+				523EEE1B20F489B800A87F9E /* SHtimesaleViewController.swift */,
 			);
 			path = TimeSale;
 			sourceTree = "<group>";
@@ -195,6 +356,10 @@
 			isa = PBXGroup;
 			children = (
 				52C6D03E20ECF85B0050A7C8 /* SHmarketViewController.swift */,
+				528A516E20F52CF300DB39FC /* SHmarketTableViewCell.swift */,
+				528A517020F52FB300DB39FC /* SHmarketCollectionViewCell.swift */,
+				528A517420F533DA00DB39FC /* DefaultTableViewCell.swift */,
+				528A517520F533DA00DB39FC /* DefaultTableViewCell.xib */,
 			);
 			path = Market;
 			sourceTree = "<group>";
@@ -233,7 +398,8 @@
 		52FBDEE720E8797A00AEEB1E /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				52FBDEEE20E87D1800AEEB1E /* Network */,
+				522A24F420EA646200D1C272 /* KakaoJoinModule.swift */,
+				52634FDA20F5BCAA00C0673E /* Model */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -253,7 +419,7 @@
 			children = (
 				52FBDF0120E8953200AEEB1E /* Main */,
 				52FBDF0220E8954C00AEEB1E /* StoreHome */,
-				52FBDF0320E8955700AEEB1E /* MyRefrigerator */,
+				52755B7820F2FB38009453A7 /* MyRefrigerator */,
 				52FBDF0520E8957300AEEB1E /* Alert */,
 				52FBDF0420E8956B00AEEB1E /* Mypage */,
 			);
@@ -284,8 +450,10 @@
 		52FBDEEE20E87D1800AEEB1E /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				52FBDEEF20E87D2A00AEEB1E /* APIRouter.swift */,
-				522A24F420EA646200D1C272 /* KakaoJoinModule.swift */,
+				52634FE020F5C04E00C0673E /* JoinNM.swift */,
+				52634FE920F5FA0300C0673E /* SearchAddressNM.swift */,
+				52634FE520F5C10300C0673E /* NetworkDelegate.swift */,
+				52B5437B20F6985700C64E51 /* LoginNM.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -301,18 +469,12 @@
 		52FBDF0220E8954C00AEEB1E /* StoreHome */ = {
 			isa = PBXGroup;
 			children = (
+				52FBDEF520E88B3C00AEEB1E /* StoreHomeViewController.swift */,
 				52CF7F9020EF9FBF00B3F13E /* Market */,
 				52CF7F8F20EF9FAD00B3F13E /* TimeSale */,
 				52CF7F8E20EF9FA400B3F13E /* Home */,
 			);
 			path = StoreHome;
-			sourceTree = "<group>";
-		};
-		52FBDF0320E8955700AEEB1E /* MyRefrigerator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MyRefrigerator;
 			sourceTree = "<group>";
 		};
 		52FBDF0420E8956B00AEEB1E /* Mypage */ = {
@@ -400,8 +562,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52755B6D20F2C0FD009453A7 /* SHhomeDetailTableViewCell.xib in Resources */,
 				520FA11820EA2DB60087C2B8 /* Info.plist in Resources */,
 				52FBDEE020E8766000AEEB1E /* LaunchScreen.storyboard in Resources */,
+				528A517720F533DA00DB39FC /* DefaultTableViewCell.xib in Resources */,
 				52FBDF0020E892D600AEEB1E /* Mypage.storyboard in Resources */,
 				52FBDEFC20E892BD00AEEB1E /* MyRefrigerator.storyboard in Resources */,
 				52FBDEDD20E8766000AEEB1E /* Assets.xcassets in Resources */,
@@ -495,29 +659,65 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B5437A20F658F300C64E51 /* Southwest.swift in Sources */,
+				523553F020F3438C00BA50DA /* UploadstoreEmptyTableViewCell.swift in Sources */,
+				52755B7720F2DF08009453A7 /* SHhomeMenuTableViewCell.swift in Sources */,
+				52634FF920F6049700C0673E /* SearchAdTableViewCell.swift in Sources */,
 				522F55E220F0F7300004A8FE /* SHcategoryViewController.swift in Sources */,
+				52B782AE20F16E9D00F1E51A /* SHcategoryCollectionViewCell.swift in Sources */,
+				523EEE1A20F4877C00A87F9E /* SHtimesaleTableViewCell.swift in Sources */,
+				52B5437420F658F300C64E51 /* Location.swift in Sources */,
+				523EEE1820F45A3E00A87F9E /* MFregister2ViewController.swift in Sources */,
+				52634FF520F6007900C0673E /* Juso.swift in Sources */,
 				52634A8720EB4C090028A33E /* KakaoJoinViewController.swift in Sources */,
+				52B5437820F658F300C64E51 /* GeoResults.swift in Sources */,
 				52FBDEED20E87AC800AEEB1E /* Extension.swift in Sources */,
+				52755B7520F2D966009453A7 /* SHhomeMenuCollectionViewCell.swift in Sources */,
 				528E324120EC7CDB0082D52C /* KakaoSelectUsertypeViewController.swift in Sources */,
 				52FBDEF620E88B3C00AEEB1E /* StoreHomeViewController.swift in Sources */,
 				52C6D03B20ECC9D00050A7C8 /* SHhomeViewController.swift in Sources */,
-				52FBDEF020E87D2A00AEEB1E /* APIRouter.swift in Sources */,
+				523553EE20F33CA600BA50DA /* ExdateEmptyTableViewCell.swift in Sources */,
+				523553F220F3789800BA50DA /* MFregisterViewController.swift in Sources */,
 				52FBDF0720E895C600AEEB1E /* FavoriteViewController.swift in Sources */,
 				528E324320EC7E090082D52C /* KakaoOwnerJoinViewController.swift in Sources */,
+				52B5437720F658F300C64E51 /* Viewport.swift in Sources */,
+				52634FF320F6007900C0673E /* Common.swift in Sources */,
+				52634FE120F5C04E00C0673E /* JoinNM.swift in Sources */,
+				5258A6B820F29372006C696B /* SHhomeDetailTableViewCell.swift in Sources */,
+				528A517120F52FB300DB39FC /* SHmarketCollectionViewCell.swift in Sources */,
+				52755B8020F2FC71009453A7 /* ExdateViewController.swift in Sources */,
+				523EEE1C20F489B800A87F9E /* SHtimesaleViewController.swift in Sources */,
 				52FBDF0920E8966F00AEEB1E /* FavoriteCollectionViewCell.swift in Sources */,
 				525FCB8120EBAE9D0076C378 /* TermViewController.swift in Sources */,
+				52755B7E20F2FC63009453A7 /* UploadstoreViewController.swift in Sources */,
 				522F55DB20F0EA960004A8FE /* SHhomeDetailViewController.swift in Sources */,
+				523553EC20F3314D00BA50DA /* UploadstoreTableViewCell.swift in Sources */,
+				52B5437C20F6985700C64E51 /* LoginNM.swift in Sources */,
+				523553EA20F3313D00BA50DA /* ExdateTableViewCell.swift in Sources */,
+				528A516F20F52CF300DB39FC /* SHmarketTableViewCell.swift in Sources */,
+				52634FF720F6047700C0673E /* SearchAdViewController.swift in Sources */,
 				52FBDED820E8765F00AEEB1E /* LoginViewController.swift in Sources */,
-				52C6D03D20ECF82E0050A7C8 /* SHtimesaleViewController.swift in Sources */,
 				52C6D03F20ECF85B0050A7C8 /* SHmarketViewController.swift in Sources */,
+				52B5437920F658F300C64E51 /* Address_components.swift in Sources */,
+				52B5437520F658F300C64E51 /* Northeast.swift in Sources */,
+				52B5437320F658F300C64E51 /* Geometry.swift in Sources */,
 				52FBDEF420E8897800AEEB1E /* TabBarViewController.swift in Sources */,
 				52996EE320EC266500F33A6D /* SelectUsertypeViewController.swift in Sources */,
 				522A24F520EA646200D1C272 /* KakaoJoinModule.swift in Sources */,
+				52634FE620F5C10300C0673E /* NetworkDelegate.swift in Sources */,
 				52634A8420EB39D60028A33E /* JoinViewController.swift in Sources */,
 				52B5789B20F0A9E8008D551F /* SHADTableViewCell.swift in Sources */,
 				52996EE120EC1CAC00F33A6D /* OwnerJoinViewController.swift in Sources */,
 				52FBDED620E8765F00AEEB1E /* AppDelegate.swift in Sources */,
+				52634FF220F6007900C0673E /* SearchAddress.swift in Sources */,
+				529893DC20F2553300191DA6 /* SHcategoryHeaderCollectionReusableView.swift in Sources */,
+				52B5437620F658F300C64E51 /* Geocoding.swift in Sources */,
+				528A517620F533DA00DB39FC /* DefaultTableViewCell.swift in Sources */,
+				523553E820F3292900BA50DA /* MyRefrigeratorViewController.swift in Sources */,
 				52CF7F9220EFA05700B3F13E /* SHhomeTableViewCell.swift in Sources */,
+				52634FE820F5C2EC00C0673E /* Join.swift in Sources */,
+				52634FEA20F5FA0300C0673E /* SearchAddressNM.swift in Sources */,
+				52634FF420F6007900C0673E /* Results.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

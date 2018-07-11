@@ -10,26 +10,76 @@ import UIKit
 
 class SHhomeDetailViewController: UIViewController {
 
+    @IBOutlet weak var detailImg: UIImageView!
+    @IBOutlet weak var detailInfoView: UIView!
+    @IBOutlet weak var productLB: UILabel!
+    @IBOutlet weak var discountLB: UILabel!
+    @IBOutlet weak var discountpriceLB: UILabel!
+    @IBOutlet weak var originalpriceLB: UILabel!
+    @IBOutlet weak var fromLB: UILabel!
+        
+    
+    @IBOutlet weak var detailTV: UITableView!
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
+        
+        detailTV.delegate = self
+        detailTV.dataSource = self
+        let nib = UINib.init(nibName: "SHhomeDetailTableViewCell", bundle: nil)
+        self.detailTV.register(nib, forCellReuseIdentifier: "detailCell")
+        
+        self.navigationItem.hidesBackButton = true
+        let newBackButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: self, action: #selector(SHhomeDetailViewController.back(sender:)))
+        
+        newBackButton.setBackgroundImage(#imageLiteral(resourceName: "Back"), for: .normal, barMetrics: .default)
+        self.navigationItem.leftBarButtonItem = newBackButton
+        
+        
+        
 
-        // Do any additional setup after loading the view.
+        
+   
+    }
+    @objc func back(sender: UIBarButtonItem) {
+        
+        navigationController?.popViewController(animated: true)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+}
+extension SHhomeDetailViewController : UITableViewDelegate{
+    
+}
+extension SHhomeDetailViewController: UITableViewDataSource{
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if indexPath.section == 0{
+      
+        let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath) as! SHhomeDetailTableViewCell
+            
+      
+       
+        return cell
+        }
+        else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath) as! SHhomeMenuTableViewCell
+            
+            return cell
+            
+        }
+        
+    }
+    
+    
 }
