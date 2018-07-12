@@ -12,7 +12,8 @@ import Parchment
 class StoreHomeViewController: UIViewController {
 
 
-    var insetFavorite :Int = 0
+   let token =  UserDefaults.standard.string(forKey: "usertoken")
+    let cate_flag = UserDefaults.standard.integer(forKey: "cate_flag")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +21,9 @@ class StoreHomeViewController: UIViewController {
        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         
-       
-        if insetFavorite == 0{
+       print(token)
+        print(cate_flag)
+       if cate_flag == 0{
             
             let favoriteView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "favoriteview")
             

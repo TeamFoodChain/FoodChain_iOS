@@ -72,7 +72,6 @@ extension FavoriteViewController: UICollectionViewDataSource{
         
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "favoritecell", for: indexPath) as! FavoriteCollectionViewCell
-        cell.favoriteLB.text = String(indexPath.row)
         
         return cell
         

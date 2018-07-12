@@ -19,6 +19,7 @@ class KakaoJoinViewController: UIViewController {
     @IBOutlet weak var emailCheck: UIImageView!
     @IBOutlet weak var confirmBtn: UIButton!
     @IBOutlet weak var JoinBtn: UIButton!
+    @IBOutlet weak var phoneCheck: UIImageView!
     
     
     override func viewDidLoad() {
@@ -66,7 +67,7 @@ class KakaoJoinViewController: UIViewController {
     
     @objc func isValid(){
         
-        if (emailTF.text?.isEmpty)! || (numberTF.text?.isEmpty)! || check == 0 {
+        if (emailTF.text?.isEmpty)! || (numberTF.text?.isEmpty)! || emailCheck.image == #imageLiteral(resourceName: "Yes")  || phoneCheck.image == #imageLiteral(resourceName: "Yes") || check == 0 {
             
             JoinBtn.isEnabled = false
             JoinBtn.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
@@ -110,7 +111,7 @@ class KakaoJoinViewController: UIViewController {
         kakaojoin.nativeKakaoCustomerJoin(user_pw_check: kakaoUserId, user_pw: kakaoUserId, user_name: KakaoNickname, user_email: gsno(emailTF.text), user_phone: gsno(numberTF.text), user_id: kakaoUserId) { [weak self](kakaojoin) in
            
             
-            if kakaojoin.message == "success signup"{
+            if kakaojoin.message == "Success Signup"{
                 let mainview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbarview") as! TabBarViewController
                 
                 self?.present(mainview, animated: true, completion: nil)

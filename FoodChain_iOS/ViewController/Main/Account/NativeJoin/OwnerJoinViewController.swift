@@ -10,7 +10,7 @@ import UIKit
 
 class OwnerJoinViewController: UIViewController,  addressDelegate{
  
-    
+    let joinManager = JoinNM()
 
     @IBOutlet weak var confirmBtn: UIButton!
     @IBOutlet weak var JoinBtn: UIButton!
@@ -24,6 +24,8 @@ class OwnerJoinViewController: UIViewController,  addressDelegate{
     @IBOutlet weak var companyad1TF: UITextField!
     @IBOutlet weak var emailcheck: UIImageView!
     @IBOutlet weak var passcheck: UIImageView!
+    @IBOutlet weak var phonecheck: UIImageView!
+    @IBOutlet weak var companynumcheck: UIImageView!
     
     var check :Int = 0
     var geolong :String = ""
@@ -73,7 +75,7 @@ class OwnerJoinViewController: UIViewController,  addressDelegate{
         ownerNameTF.addTarget(self, action: #selector(isValid), for: .editingChanged)
         
         
-        owneremailTF.addTarget(self, action: #selector(duplicateCheck), for: .editingChanged)
+        owneremailTF.addTarget(self, action: #selector(emailCheckcall), for: .editingChanged)
         owneremailTF.addTarget(self, action: #selector(isValid), for: .editingChanged)
         
         passTF.addTarget(self, action: #selector(confirmCheck), for: .editingChanged)
@@ -83,7 +85,11 @@ class OwnerJoinViewController: UIViewController,  addressDelegate{
         passcomTF.addTarget(self, action: #selector(isValid), for: .editingChanged)
         
         ownernumberTF.addTarget(self, action: #selector(isValid), for: .editingChanged)
+        ownernumberTF.addTarget(self, action: #selector(numberCheckcall), for: .editingChanged)
+        
         companynumberTF.addTarget(self, action: #selector(isValid), for: .editingChanged)
+        companynumberTF.addTarget(self, action: #selector(companynumbercheck), for: .editingChanged)
+        
         companynameTF.addTarget(self, action: #selector(isValid), for: .editingChanged)
         companyad1TF.addTarget(self, action: #selector(isValid), for: .editingChanged)
         confirmBtn.addTarget(self, action: #selector(isValid), for: .touchUpInside)
@@ -101,7 +107,99 @@ class OwnerJoinViewController: UIViewController,  addressDelegate{
         
     }
     
-    @objc func duplicateCheck(_ sender: UITextField) {
+    
+    @objc func emailCheckcall(_ sender: UITextField) {
+        
+        if owneremailTF.text?.isEmpty == false{
+            
+            joinManager.emailcheck(email: gsno(owneremailTF.text)) { [weak self](emailchecking) in
+                
+                if emailchecking.message == "Success Email Check"{
+                    
+                    self?.emailcheck.image = #imageLiteral(resourceName: "Yes-Color")
+                    
+                }
+                else if emailchecking.message == "This Email Already Exists." || emailchecking.message == "Invalid Data"{
+                    
+                    self?.emailcheck.image = #imageLiteral(resourceName: "Yes")
+                    
+                    
+                }
+                else{
+                    let alertController = UIAlertController(title: "",message: "네트워크 문제입니다.", preferredStyle: UIAlertControllerStyle.alert)
+                    let cancelButton = UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: nil)
+                    alertController.addAction(cancelButton)
+                    self?.present(alertController,animated: true,completion: nil)
+                    
+                }
+            }
+        }
+        
+        
+    }
+    
+    @objc func numberCheckcall(_ sender: UITextField){
+        
+        if ownernumberTF.text?.isEmpty == false{
+            
+            joinManager.phonecheck(number: gsno(ownernumberTF.text)) {[weak self] (numberchecking) in
+                
+                if numberchecking.message == "Success Phone Number Check"{
+                    
+                    self?.phonecheck.image = #imageLiteral(resourceName: "Yes-Color")
+                    
+                }
+                else if numberchecking.message == "This Phone Number Already Exists." || numberchecking.message == "Invalid Data"{
+                    
+                    self?.phonecheck.image = #imageLiteral(resourceName: "Yes")
+                    
+                    
+                }
+                else{
+                    let alertController = UIAlertController(title: "",message: "네트워크 문제입니다.", preferredStyle: UIAlertControllerStyle.alert)
+                    let cancelButton = UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: nil)
+                    alertController.addAction(cancelButton)
+                    self?.present(alertController,animated: true,completion: nil)
+                    
+                }
+                
+            }
+            
+        }
+        
+        
+    }
+    
+    @objc func companynumbercheck(_ sender: UITextField){
+        
+        if companynumberTF.text?.isEmpty == false{
+            
+            joinManager.companynumcheck(companynumber: gsno(companynumberTF.text)){[weak self] (comNum) in
+                
+                if comNum.message == "Success Sup_regist_num Check"{
+                    
+                    self?.companynumcheck.image = #imageLiteral(resourceName: "Yes-Color")
+                    
+                }
+                else if comNum.message == "This Sup_regist_num Already Exists." || comNum.message == "Invalid Data"{
+                    print(comNum.message)
+                    self?.companynumcheck.image = #imageLiteral(resourceName: "Yes")
+                    
+                    
+                }
+                else{
+                    let alertController = UIAlertController(title: "",message: "네트워크 문제입니다.", preferredStyle: UIAlertControllerStyle.alert)
+                    let cancelButton = UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: nil)
+                    alertController.addAction(cancelButton)
+                    self?.present(alertController,animated: true,completion: nil)
+                    
+                }
+                
+            }
+            
+        }
+        
+        
         
         
     }
@@ -128,7 +226,7 @@ class OwnerJoinViewController: UIViewController,  addressDelegate{
     @objc func isValid(){
         
         if (ownerNameTF.text?.isEmpty)! || (passTF.text?.isEmpty)! || (owneremailTF.text?.isEmpty)! || (passcomTF.text?.isEmpty)! || (ownernumberTF.text?.isEmpty)! ||
-            (companyad1TF.text?.isEmpty)!||(companynameTF.text?.isEmpty)!||(companynumberTF.text?.isEmpty)!||passcheck.image == UIImage(named: "Yes") || check == 0 {
+            (companyad1TF.text?.isEmpty)!||(companynameTF.text?.isEmpty)!||(companynumberTF.text?.isEmpty)!||passcheck.image == #imageLiteral(resourceName: "Yes") || emailcheck.image == #imageLiteral(resourceName: "Yes") || phonecheck.image == #imageLiteral(resourceName: "Yes") || companynumcheck.image == #imageLiteral(resourceName: "Yes") || check == 0 {
             
             JoinBtn.isEnabled = false
             JoinBtn.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
@@ -158,13 +256,14 @@ class OwnerJoinViewController: UIViewController,  addressDelegate{
         }
     }
     @IBAction func joinAction(_ sender: Any) {
-        let join = JoinNM()
+       
         
-        join.nativeOwnerJoin(sup_pw_check: gsno(passcomTF.text), sup_pw: gsno(passTF.text), sup_name: gsno(ownerNameTF.text), sup_email: gsno(owneremailTF.text), sup_phone: gsno(ownernumberTF.text), sup_regist_num: gsno(companynumberTF.text), mar_name: gsno(companynameTF.text), mar_locate_lat: geolong, mar_locate_long: geolat, mar_addr: gsno(companyad1TF.text)) { [weak self](Join) in
-            if Join.message == "success signup"{
+        joinManager.nativeOwnerJoin(sup_pw: gsno(passTF.text), sup_name: gsno(ownerNameTF.text), sup_email: gsno(owneremailTF.text), sup_phone: gsno(ownernumberTF.text), sup_regist_num: gsno(companynumberTF.text), mar_name: gsno(companynameTF.text), mar_locate_lat: geolong, mar_locate_long: geolat, mar_addr: gsno(companyad1TF.text)) { [weak self](Join) in
+            if Join.message == "Success Signup"{
                 
                 let mainview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbarview") as! TabBarViewController
-                
+                UserDefaults.standard.set(Join.token, forKey: "usertoken")
+                UserDefaults.standard.set(Join.cate_flag, forKey: "cate_flag")
                 self?.present(mainview, animated: true, completion: nil)
             }
             else{

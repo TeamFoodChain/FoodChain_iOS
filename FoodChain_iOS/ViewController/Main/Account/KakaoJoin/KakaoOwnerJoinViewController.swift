@@ -24,10 +24,11 @@ class KakaoOwnerJoinViewController: UIViewController, addressDelegate {
     @IBOutlet weak var companynumTF: UITextField!
     @IBOutlet weak var companyadress1TF: UITextField!
     @IBOutlet weak var companynameTF: UITextField!
-    @IBOutlet weak var emainCheck: UIImageView!
+    @IBOutlet weak var emailCheck: UIImageView!
     @IBOutlet weak var comnumCheck: UIImageView!
     @IBOutlet weak var termCheck: UIButton!
     @IBOutlet weak var JoinBtn: UIButton!
+    @IBOutlet weak var phoneCheck: UIImageView!
     
     
     override func viewDidLoad() {
@@ -90,7 +91,7 @@ class KakaoOwnerJoinViewController: UIViewController, addressDelegate {
     
     @objc func isValid(){
         
-        if (ownernameTF.text?.isEmpty)! || (owneremailTF.text?.isEmpty)! || (ownernumberTF.text?.isEmpty)! || (companynumTF.text?.isEmpty)! || (companyadress1TF.text?.isEmpty)! || (companynameTF.text?.isEmpty)! || check == 0 {
+        if (ownernameTF.text?.isEmpty)! || (owneremailTF.text?.isEmpty)! || (ownernumberTF.text?.isEmpty)! || (companynumTF.text?.isEmpty)! || (companyadress1TF.text?.isEmpty)! || (companynameTF.text?.isEmpty)! || emailCheck.image == #imageLiteral(resourceName: "Yes") || comnumCheck.image == #imageLiteral(resourceName: "Yes") || phoneCheck.image == #imageLiteral(resourceName: "Yes") || check == 0 {
             
             JoinBtn.isEnabled = false
             JoinBtn.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
@@ -137,8 +138,8 @@ class KakaoOwnerJoinViewController: UIViewController, addressDelegate {
     @IBAction func KownerJoinAction(_ sender: Any){
         
         let join = JoinNM()
-        join.nativeKakaoOwnerJoin(sup_pw_check: kakaoUserId, sup_pw: kakaoUserId, sup_name: gsno(ownernameTF.text), sup_email: gsno(owneremailTF.text), sup_phone: gsno(ownernumberTF.text), sup_regist_num: gsno(companynumTF.text), mar_name: gsno(companynameTF.text), mar_locate_lat: geolat, mar_locate_long: geolong, mar_addr: gsno(companyadress1TF.text), sup_id: kakaoUserId) { [weak self](Join) in
-            if Join.message == "success signup"{
+        join.nativeKakaoOwnerJoin(sup_pw: kakaoUserId, sup_name: gsno(ownernameTF.text), sup_email: gsno(owneremailTF.text), sup_phone: gsno(ownernumberTF.text), sup_regist_num: gsno(companynumTF.text), mar_name: gsno(companynameTF.text), mar_locate_lat: geolat, mar_locate_long: geolong, mar_addr: gsno(companyadress1TF.text), sup_id: kakaoUserId) { [weak self](Join) in
+            if Join.message == "Success Signup"{
                 
                 let mainview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbarview") as! TabBarViewController
                 
