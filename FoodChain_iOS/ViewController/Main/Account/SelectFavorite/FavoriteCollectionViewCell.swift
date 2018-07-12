@@ -10,13 +10,14 @@ import UIKit
 
 
 class FavoriteCollectionViewCell: UICollectionViewCell {
-    
-    @IBOutlet weak var favoriteLB: UILabel!
+  
     
     @IBOutlet weak var favoriteImg: UIImageView!
+    @IBOutlet weak var selectImg: UIImageView!
+    
     override func awakeFromNib() {
-        self.layer.cornerRadius = 10.0
-        favoriteImg.layer.cornerRadius = 10.0
+        self.layer.cornerRadius = 25.0
+        favoriteImg.layer.cornerRadius = 25.0
         
     }
     
@@ -24,10 +25,10 @@ class FavoriteCollectionViewCell: UICollectionViewCell {
     override var isSelected: Bool {
         didSet {
             if isSelected { // Selected cell
-                self.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+                self.selectImg.image = #imageLiteral(resourceName: "selectImg")
     
             } else { // Normal cell
-                self.backgroundColor = #colorLiteral(red: 0.2158766389, green: 0.6043385863, blue: 0.4158287644, alpha: 1)
+                 self.selectImg.image = nil
               
                 
             }

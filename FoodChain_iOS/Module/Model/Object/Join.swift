@@ -10,6 +10,9 @@ import Foundation
 
 struct Join: Codable {
     var message: String?
-    var identify: String?
+    var token: String?
+    var cate_flag : Int?
+
+    
 }
 
