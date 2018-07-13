@@ -21,7 +21,7 @@ class SHmarketViewController: UIViewController , CLLocationManagerDelegate,GMSMa
     @IBOutlet weak var locationTV: UITableView!
     @IBOutlet weak var mapview: UIView!
     
-    let googleMaps: GMSMapView! = GMSMapView.map(withFrame: CGRect(x: 0,y:0, width: UIScreen.main.bounds.width , height: UIScreen.main.bounds.width), camera: GMSCameraPosition.camera(withLatitude: 37.561104, longitude: 126.994320, zoom: 20.0))
+    let googleMaps: GMSMapView! = GMSMapView.map(withFrame: CGRect(x: 0,y:0, width: UIScreen.main.bounds.width , height: UIScreen.main.bounds.width), camera: GMSCameraPosition.camera(withLatitude: 37.561104, longitude: 126.994320, zoom: 15.0))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,9 +40,11 @@ class SHmarketViewController: UIViewController , CLLocationManagerDelegate,GMSMa
       
         
         googleMaps.isMyLocationEnabled = true
-        googleMaps.settings.myLocationButton = true
+       
         googleMaps.settings.zoomGestures = true
+        googleMaps.settings.scrollGestures = true
         googleMaps.settings.allowScrollGesturesDuringRotateOrZoom = true
+        
         
         googleMaps.accessibilityElementsHidden = false
         

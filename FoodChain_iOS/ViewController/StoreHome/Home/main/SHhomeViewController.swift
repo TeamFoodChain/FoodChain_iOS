@@ -129,7 +129,7 @@ extension SHhomeViewController : UITableViewDataSource{
             
         }
         else{
-            return 267
+            return self.view.frame.size.width
             
         }
         
@@ -164,9 +164,12 @@ extension SHhomeViewController : UITableViewDataSource{
         }
     }
     
-    
+ 
 }
+
 extension SHhomeViewController : UITableViewDelegate{
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0{
             

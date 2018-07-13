@@ -25,6 +25,8 @@ class JoinNM :NetworkDelegate{
                 case .success:
                     if let data = response.data {
                         do {
+                            print(response.response?.statusCode)
+                            print(JSON(data)["message"])
                             let join = try JSONDecoder().decode(Join.self, from: data)
                                 completion(join)
                            
@@ -59,6 +61,8 @@ class JoinNM :NetworkDelegate{
             case .success:
                 if let data = response.data {
                     do {
+                        print(response.response?.statusCode)
+                        print(JSON(data)["message"])
                             let join = try JSONDecoder().decode(Join.self, from: data)
                             completion(join)
                         
@@ -73,7 +77,7 @@ class JoinNM :NetworkDelegate{
         
     }
     
-    func nativeKakaoCustomerJoin(user_pw_check:String,user_pw:String,user_name:String,user_email:String,user_phone:String,user_id:String, completion: @escaping (Join) -> Void) {
+    func nativeKakaoCustomerJoin(user_pw:String,user_name:String,user_email:String,user_phone:String,user_id:String, completion: @escaping (Join) -> Void) {
         let url = "\(baseURL)/users/signup/general"
         let parameters = [
             "user_pw" : user_pw,
@@ -87,6 +91,8 @@ class JoinNM :NetworkDelegate{
             case .success:
                 if let data = response.data {
                     do {
+                        print(response.response?.statusCode)
+                        print(JSON(data)["message"])
                         let join = try JSONDecoder().decode(Join.self, from: data)
                             completion(join)
                        
@@ -122,6 +128,8 @@ class JoinNM :NetworkDelegate{
             case .success:
                 if let data = response.data {
                     do {
+                        print(response.response?.statusCode)
+                        print(JSON(data)["message"])
                         let join = try JSONDecoder().decode(Join.self, from: data)
                             completion(join)
                        
@@ -149,6 +157,8 @@ class JoinNM :NetworkDelegate{
             case .success:
                 if let data = response.data {
                     do {
+                        print(response.response?.statusCode)
+                        print(JSON(data)["message"])
                         let emailchecking = try JSONDecoder().decode(Join.self, from: data)
                             completion(emailchecking)
                     } catch let error {
@@ -177,10 +187,12 @@ class JoinNM :NetworkDelegate{
         Alamofire.request(url, method: .post, parameters: parameter, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
             switch response.result{
             case .success:
-                print(response.response?.statusCode)
+               
                 if let data = response.data {
                     do {
+                        print(response.response?.statusCode)
                         print(JSON(data)["message"])
+                        
                         let phonechecking = try JSONDecoder().decode(Join.self, from: data)
                         completion(phonechecking)
                     } catch let error {
@@ -209,12 +221,13 @@ class JoinNM :NetworkDelegate{
         Alamofire.request(url, method: .post, parameters: parameter, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
             switch response.result{
             case .success:
-                print(response.response?.statusCode)
+                
                 if let data = response.data {
                     do {
+                        print(response.response?.statusCode)
                         print(JSON(data)["message"])
-                        let phonechecking = try JSONDecoder().decode(Join.self, from: data)
-                        completion(phonechecking)
+                        let companynumchecking = try JSONDecoder().decode(Join.self, from: data)
+                        completion(companynumchecking)
                     } catch let error {
                         print(error)
                     }

@@ -59,14 +59,18 @@
 		52B5437A20F658F300C64E51 /* Southwest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5437220F658F300C64E51 /* Southwest.swift */; };
 		52B5437C20F6985700C64E51 /* LoginNM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5437B20F6985700C64E51 /* LoginNM.swift */; };
 		52B5789B20F0A9E8008D551F /* SHADTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5789A20F0A9E8008D551F /* SHADTableViewCell.swift */; };
+		52B5CC4A20F84BFC001E3339 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5CC4920F84BFC001E3339 /* Data.swift */; };
+		52B5CC4C20F84D14001E3339 /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5CC4B20F84D14001E3339 /* Coupon.swift */; };
 		52B782AE20F16E9D00F1E51A /* SHcategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B782AD20F16E9D00F1E51A /* SHcategoryCollectionViewCell.swift */; };
+		52B9E55D20F7D14F00EEA52B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B9E55C20F7D14E00EEA52B /* Assets.xcassets */; };
+		52B9E55F20F7EF2300EEA52B /* ChoiceNM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9E55E20F7EF2300EEA52B /* ChoiceNM.swift */; };
+		52B9E56620F82E9500EEA52B /* LocateNM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9E56520F82E9500EEA52B /* LocateNM.swift */; };
 		52C6D03B20ECC9D00050A7C8 /* SHhomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6D03A20ECC9D00050A7C8 /* SHhomeViewController.swift */; };
 		52C6D03F20ECF85B0050A7C8 /* SHmarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6D03E20ECF85B0050A7C8 /* SHmarketViewController.swift */; };
 		52CF7F9220EFA05700B3F13E /* SHhomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF7F9120EFA05700B3F13E /* SHhomeTableViewCell.swift */; };
 		52FBDED620E8765F00AEEB1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBDED520E8765F00AEEB1E /* AppDelegate.swift */; };
 		52FBDED820E8765F00AEEB1E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBDED720E8765F00AEEB1E /* LoginViewController.swift */; };
 		52FBDEDB20E8765F00AEEB1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FBDED920E8765F00AEEB1E /* Main.storyboard */; };
-		52FBDEDD20E8766000AEEB1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52FBDEDC20E8766000AEEB1E /* Assets.xcassets */; };
 		52FBDEE020E8766000AEEB1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FBDEDE20E8766000AEEB1E /* LaunchScreen.storyboard */; };
 		52FBDEED20E87AC800AEEB1E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBDEEC20E87AC800AEEB1E /* Extension.swift */; };
 		52FBDEF420E8897800AEEB1E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBDEF320E8897800AEEB1E /* TabBarViewController.swift */; };
@@ -134,7 +138,12 @@
 		52B5437220F658F300C64E51 /* Southwest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Southwest.swift; sourceTree = "<group>"; };
 		52B5437B20F6985700C64E51 /* LoginNM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNM.swift; sourceTree = "<group>"; };
 		52B5789A20F0A9E8008D551F /* SHADTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHADTableViewCell.swift; sourceTree = "<group>"; };
+		52B5CC4920F84BFC001E3339 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		52B5CC4B20F84D14001E3339 /* Coupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
 		52B782AD20F16E9D00F1E51A /* SHcategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHcategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		52B9E55C20F7D14E00EEA52B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52B9E55E20F7EF2300EEA52B /* ChoiceNM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceNM.swift; sourceTree = "<group>"; };
+		52B9E56520F82E9500EEA52B /* LocateNM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocateNM.swift; sourceTree = "<group>"; };
 		52C6D03A20ECC9D00050A7C8 /* SHhomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHhomeViewController.swift; sourceTree = "<group>"; };
 		52C6D03E20ECF85B0050A7C8 /* SHmarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHmarketViewController.swift; sourceTree = "<group>"; };
 		52CF7F9120EFA05700B3F13E /* SHhomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHhomeTableViewCell.swift; sourceTree = "<group>"; };
@@ -142,7 +151,6 @@
 		52FBDED520E8765F00AEEB1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FBDED720E8765F00AEEB1E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		52FBDEDA20E8765F00AEEB1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		52FBDEDC20E8766000AEEB1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52FBDEDF20E8766000AEEB1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52FBDEEC20E87AC800AEEB1E /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		52FBDEF320E8897800AEEB1E /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -251,6 +259,8 @@
 				52B5436A20F658F300C64E51 /* Geoconding */,
 				52634FED20F6007900C0673E /* SearchAddress */,
 				52634FE720F5C2EC00C0673E /* Join.swift */,
+				52B5CC4920F84BFC001E3339 /* Data.swift */,
+				52B5CC4B20F84D14001E3339 /* Coupon.swift */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -407,9 +417,9 @@
 		52FBDEE820E879FC00AEEB1E /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				52B9E55C20F7D14E00EEA52B /* Assets.xcassets */,
 				520FA11720EA2DB60087C2B8 /* Info.plist */,
 				52FBDED520E8765F00AEEB1E /* AppDelegate.swift */,
-				52FBDEDC20E8766000AEEB1E /* Assets.xcassets */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -450,10 +460,12 @@
 		52FBDEEE20E87D1800AEEB1E /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				52634FE020F5C04E00C0673E /* JoinNM.swift */,
-				52634FE920F5FA0300C0673E /* SearchAddressNM.swift */,
 				52634FE520F5C10300C0673E /* NetworkDelegate.swift */,
+				52634FE920F5FA0300C0673E /* SearchAddressNM.swift */,
+				52634FE020F5C04E00C0673E /* JoinNM.swift */,
 				52B5437B20F6985700C64E51 /* LoginNM.swift */,
+				52B9E55E20F7EF2300EEA52B /* ChoiceNM.swift */,
+				52B9E56520F82E9500EEA52B /* LocateNM.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -564,11 +576,11 @@
 			files = (
 				52755B6D20F2C0FD009453A7 /* SHhomeDetailTableViewCell.xib in Resources */,
 				520FA11820EA2DB60087C2B8 /* Info.plist in Resources */,
+				52B9E55D20F7D14F00EEA52B /* Assets.xcassets in Resources */,
 				52FBDEE020E8766000AEEB1E /* LaunchScreen.storyboard in Resources */,
 				528A517720F533DA00DB39FC /* DefaultTableViewCell.xib in Resources */,
 				52FBDF0020E892D600AEEB1E /* Mypage.storyboard in Resources */,
 				52FBDEFC20E892BD00AEEB1E /* MyRefrigerator.storyboard in Resources */,
-				52FBDEDD20E8766000AEEB1E /* Assets.xcassets in Resources */,
 				52FBDEDB20E8765F00AEEB1E /* Main.storyboard in Resources */,
 				52FBDEFA20E8929D00AEEB1E /* StoreHome.storyboard in Resources */,
 				52FBDEFE20E892CB00AEEB1E /* Alert.storyboard in Resources */,
@@ -674,8 +686,10 @@
 				52634A8720EB4C090028A33E /* KakaoJoinViewController.swift in Sources */,
 				52B5437820F658F300C64E51 /* GeoResults.swift in Sources */,
 				52FBDEED20E87AC800AEEB1E /* Extension.swift in Sources */,
+				52B5CC4A20F84BFC001E3339 /* Data.swift in Sources */,
 				52755B7520F2D966009453A7 /* SHhomeMenuCollectionViewCell.swift in Sources */,
 				528E324120EC7CDB0082D52C /* KakaoSelectUsertypeViewController.swift in Sources */,
+				52B5CC4C20F84D14001E3339 /* Coupon.swift in Sources */,
 				52FBDEF620E88B3C00AEEB1E /* StoreHomeViewController.swift in Sources */,
 				52C6D03B20ECC9D00050A7C8 /* SHhomeViewController.swift in Sources */,
 				523553EE20F33CA600BA50DA /* ExdateEmptyTableViewCell.swift in Sources */,
@@ -708,6 +722,7 @@
 				522A24F520EA646200D1C272 /* KakaoJoinModule.swift in Sources */,
 				52634FE620F5C10300C0673E /* NetworkDelegate.swift in Sources */,
 				52634A8420EB39D60028A33E /* JoinViewController.swift in Sources */,
+				52B9E55F20F7EF2300EEA52B /* ChoiceNM.swift in Sources */,
 				52B5789B20F0A9E8008D551F /* SHADTableViewCell.swift in Sources */,
 				52996EE120EC1CAC00F33A6D /* OwnerJoinViewController.swift in Sources */,
 				52FBDED620E8765F00AEEB1E /* AppDelegate.swift in Sources */,
@@ -719,6 +734,7 @@
 				52CF7F9220EFA05700B3F13E /* SHhomeTableViewCell.swift in Sources */,
 				52634FE820F5C2EC00C0673E /* Join.swift in Sources */,
 				52634FEA20F5FA0300C0673E /* SearchAddressNM.swift in Sources */,
+				52B9E56620F82E9500EEA52B /* LocateNM.swift in Sources */,
 				52634FF420F6007900C0673E /* Results.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -873,7 +889,10 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/FoodChain_iOS/Support/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -956,7 +975,10 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/FoodChain_iOS/Support/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

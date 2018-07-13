@@ -14,6 +14,7 @@ class KakaoJoinViewController: UIViewController {
     var KakaoNickname:String = ""
     var check : Int = 0
 
+    let joinManager = JoinNM()
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var numberTF: UITextField!
     @IBOutlet weak var emailCheck: UIImageView!
@@ -48,10 +49,11 @@ class KakaoJoinViewController: UIViewController {
     }
     func initAddTarget(){
         
-        emailTF.addTarget(self, action: #selector(duplicateCheck), for: .editingChanged)
+        emailTF.addTarget(self, action: #selector(emailCheckcall), for: .editingChanged)
         emailTF.addTarget(self, action: #selector(isValid), for: .editingChanged)
         
         numberTF.addTarget(self, action: #selector(isValid), for: .editingChanged)
+        numberTF.addTarget(self, action: #selector(numberCheckcall), for: .editingChanged)
         confirmBtn.addTarget(self, action: #selector(isValid), for: .touchUpInside)
         
         
@@ -59,11 +61,68 @@ class KakaoJoinViewController: UIViewController {
         
     }
     
-    @objc func duplicateCheck(_ sender: UITextField) {
+    @objc func emailCheckcall(_ sender: UITextField) {
+        
+        if emailTF.text?.isEmpty == false{
+            
+            joinManager.emailcheck(email: gsno(emailTF.text)) { [weak self](emailchecking) in
+                
+                if emailchecking.message == "Success Email Check"{
+                    
+                    self?.emailCheck.image = #imageLiteral(resourceName: "Yes-Color")
+                    
+                }
+                else if emailchecking.message == "This Email Already Exists." || emailchecking.message == "Invalid Data"{
+                    
+                    self?.emailCheck.image = #imageLiteral(resourceName: "Yes")
+                    
+                    
+                }
+                else{
+                    let alertController = UIAlertController(title: "",message: "네트워크 문제입니다.", preferredStyle: UIAlertControllerStyle.alert)
+                    let cancelButton = UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: nil)
+                    alertController.addAction(cancelButton)
+                    self?.present(alertController,animated: true,completion: nil)
+                    
+                }
+            }
+        }
         
         
     }
-  
+    
+    @objc func numberCheckcall(_ sender: UITextField){
+        
+        if numberTF.text?.isEmpty == false{
+            
+            joinManager.phonecheck(number: gsno(numberTF.text)) {[weak self] (numberchecking) in
+                
+                if numberchecking.message == "Success Phone Number Check"{
+                    
+                    self?.phoneCheck.image = #imageLiteral(resourceName: "Yes-Color")
+                    
+                }
+                else if numberchecking.message == "This Phone Number Already Exists." || numberchecking.message == "Invalid Data"{
+                    
+                    self?.phoneCheck.image = #imageLiteral(resourceName: "Yes")
+                    
+                    
+                }
+                else{
+                    let alertController = UIAlertController(title: "",message: "네트워크 문제입니다.", preferredStyle: UIAlertControllerStyle.alert)
+                    let cancelButton = UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: nil)
+                    alertController.addAction(cancelButton)
+                    self?.present(alertController,animated: true,completion: nil)
+                    
+                }
+                
+            }
+            
+        }
+        
+        
+    }
+
     
     @objc func isValid(){
         
@@ -107,12 +166,19 @@ class KakaoJoinViewController: UIViewController {
     
     @IBAction func kakaoJoinAction(_ sender: Any) {
         
-        let kakaojoin = JoinNM()
-        kakaojoin.nativeKakaoCustomerJoin(user_pw_check: kakaoUserId, user_pw: kakaoUserId, user_name: KakaoNickname, user_email: gsno(emailTF.text), user_phone: gsno(numberTF.text), user_id: kakaoUserId) { [weak self](kakaojoin) in
+      
+       joinManager.nativeKakaoCustomerJoin(user_pw: kakaoUserId, user_name: KakaoNickname, user_email: gsno(emailTF.text), user_phone: gsno(numberTF.text), user_id: kakaoUserId) { [weak self](kakaojoin) in
            
             
             if kakaojoin.message == "Success Signup"{
                 let mainview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbarview") as! TabBarViewController
+               
+                let userdata = UserDefaults.standard
+                userdata.set(kakaojoin.token, forKey: "usertoken")
+                userdata.set(kakaojoin.cate_flag, forKey: "cate_flag")
+                userdata.set(0, forKey: "identify")
+                userdata.set(kakaojoin.locate_flag,forKey: "selectlocation")
+                userdata.synchronize()
                 
                 self?.present(mainview, animated: true, completion: nil)
                 

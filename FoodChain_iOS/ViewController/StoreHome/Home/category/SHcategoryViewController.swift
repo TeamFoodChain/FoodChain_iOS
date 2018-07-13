@@ -15,31 +15,31 @@ class SHcategoryViewController: UIViewController {
     var cellMarginSize = 10.0
     var gridline = 1
     
-
-    
+   
     @IBOutlet weak var categoryTV: UICollectionView!
    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
         categoryTV.delegate = self
         categoryTV.dataSource = self
         
-      
         
-    
-        
-      
  
     }
     
     @IBAction func GridAction(_ sender: Any) {
         
         if  gridline == 1{
+            
+            
+            
             gridline = 0
             categoryTV.reloadData()
         }
         else{
+          
             gridline = 1
             categoryTV.reloadData()
             
@@ -50,10 +50,13 @@ class SHcategoryViewController: UIViewController {
     @IBAction func ListAction(_ sender: Any) {
         
         if  gridline == 1{
+           
+           
             gridline = 0
             categoryTV.reloadData()
         }
         else{
+          
             gridline = 1
             categoryTV.reloadData()
             
@@ -64,8 +67,6 @@ class SHcategoryViewController: UIViewController {
     
   
     @IBAction func back(_ sender: Any) {
-       
-
         UIView.animate(withDuration: 0.5 as TimeInterval, animations: {
             let transition = CATransition()
             transition.duration = 0.5
@@ -75,11 +76,14 @@ class SHcategoryViewController: UIViewController {
             self.parent?.view.layer.add(transition, forKey: kCATransition)
         }, completion: {
             finished in
-           
+            
             self.view.removeFromSuperview()
-        
+            
         })
-     
+        
+       
+
+    
 
 
     }
@@ -94,9 +98,21 @@ extension SHcategoryViewController: UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        if gridline == 1 {
         let headerview = collectionView.dequeueReusableSupplementaryView(ofKind: kind,withReuseIdentifier:  "headerView", for: indexPath) as! SHcategoryHeaderCollectionReusableView
+        headerview.grid = gridline
+            
         
         return headerview
+        }else{
+            let headerview = collectionView.dequeueReusableSupplementaryView(ofKind: kind,withReuseIdentifier:  "headerView", for: indexPath) as! SHcategoryHeaderCollectionReusableView
+            headerview.grid = gridline
+          
+            
+            return headerview
+            
+        }
     }
     
     
@@ -124,13 +140,13 @@ extension SHcategoryViewController: UICollectionViewDelegateFlowLayout{
         if gridline == 1{
             
             let width = self.calculateWith()
-            return CGSize(width: width, height: width + 50)
+            return CGSize(width: width, height: width + width/3)
             
         }
         else{
             let width = self.calculateWith()
         
-            return CGSize(width: 2 * width + 10, height: width + 50)
+            return CGSize(width: 2 * width + 10, height: (2 * width + 10 )+(2 * width + 10)/3 )
             
             
         }

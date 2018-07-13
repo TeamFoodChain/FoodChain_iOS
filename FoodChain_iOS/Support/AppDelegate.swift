@@ -39,10 +39,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        
+        let userdata  = UserDefaults.standard
+        
+        userdata.removeObject(forKey: "cate_flag")
+        userdata.removeObject(forKey: "identify")
+        userdata.removeObject(forKey: "selectlocation")
+        userdata.synchronize()
+        
         IQKeyboardManager.shared.enable = true
         
         GMSServices.provideAPIKey("AIzaSyD91nnqjxPACv0e1t69sumj7haHpSLAOgY")
         GMSPlacesClient.provideAPIKey("AIzaSyD91nnqjxPACv0e1t69sumj7haHpSLAOgY")
+        
+        Thread.sleep(forTimeInterval: 1.0)
         // Override point for customization after application launch.
         return true
     }
@@ -67,6 +77,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        
+      
     }
     
     

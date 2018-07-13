@@ -31,13 +31,10 @@ class MFregisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      
-//        let rect = CGRect(x: 10, y: 10, width: 100, height: 100)
-//        let myView = UIView(frame: rect)
-//
+
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+       
+
         
         productImg.image = photo
         
@@ -57,28 +54,7 @@ class MFregisterViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    
-    @objc func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0 ||
-                (keyboardHeight != keyboardSize.height/2)
-            {
-                print(keyboardSize.height)
-                self.view.frame.origin.y = 0
-                self.view.frame.origin.y -= keyboardSize.height/2 - 5
-                keyboardHeight = keyboardSize.height
-            }
-        }
-    }
-    
-    @objc func keyboardWillHide(notification: NSNotification) {
-        
-            if self.view.frame.origin.y != 0 {
-                
-                self.view.frame.origin.y = (navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height //keyboardSize.height/2
-            }
-        
-    }
+
 
     
     func showDatePicker(){
