@@ -10,7 +10,7 @@ import Foundation
 
 class NetworkDelegate{
     
-    internal let baseURL = "----------"
-    internal let jusokey = "----------"
-    internal let googlekey = "------------"
+    internal let baseURL = "https://www.eatda.cf"
+    internal let jusokey = "U01TX0FVVEgyMDE4MDcxMTE3MzkxODEwODAwMzE="
+    internal let googlekey = "AIzaSyD91nnqjxPACv0e1t69sumj7haHpSLAOgY"
 }

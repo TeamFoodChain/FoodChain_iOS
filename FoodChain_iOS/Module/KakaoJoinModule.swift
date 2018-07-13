@@ -29,13 +29,13 @@ class KakaoJoinModule {
                     if kakao != nil{
                         let kakaologinCheck = LoginNM()
                         kakaologinCheck.kakaoidcheck(kakaoid: self.gsno(kakao?.id)) {(kakaocheck) in
-                            _ = UIViewController.displaySpinner(onView: view.view)
+                            _ = UINavigationController.displaySpinner(onView: view.view)
                             if kakaocheck.message == "Success Id Check"{
                                 print(kakao!)
                                 let mainview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "kakaoselectusertype") as! KakaoSelectUsertypeViewController
                                 mainview.kakaoUserId = (kakao?.id)!
                                 mainview.KakaoNickname = (kakao?.nickname)!
-                                UIViewController.removeSpinner(spinner: view.view)
+                                UINavigationController.removeSpinner(spinner: view.view)
                                 view.navigationController?.pushViewController(mainview, animated: true)
                                 
                             }
@@ -54,8 +54,32 @@ class KakaoJoinModule {
                                         userdata.set(KakaoLogin.identify, forKey: "identify")
                                         userdata.set(KakaoLogin.locate_flag,forKey: "selectlocation")
                                         userdata.synchronize()
-                                        UIViewController.removeSpinner(spinner: view.view)
-                                        view.present(mainview, animated: true, completion: nil)
+
+                                        
+                                        let mainget = StorehomeMainNM()
+                                        let token = UserDefaults.standard.string(forKey: "usertoken")
+                                        mainget.getmaindata(token: token!, completion: { (main) in
+                                            
+                                            if main.message == "Success to Get Data"{
+                                                
+                                                let storehome = UIStoryboard.init(name: "StoreHome", bundle: nil).instantiateViewController(withIdentifier: "firstview") as! StoreHomeViewController
+                                                storehome.maindata = main
+                                                print(main)
+                                                
+                                                UINavigationController.removeSpinner(spinner: view.view)
+                                                view.present(mainview, animated: true, completion: nil)
+                                                
+                                            }
+                                            else{
+                                                 UINavigationController.removeSpinner(spinner: view.view)
+                                                view.present(mainview, animated: true, completion: nil)
+                                                
+                                            }
+                                      
+                                        })
+                                        
+                                        
+                                       
                                     }
                                     else{
                                         print(1)

@@ -8,6 +8,7 @@
 
 import UIKit
 import Parchment
+import Kingfisher
 
 class SHhomeViewController: UIViewController ,UIScrollViewDelegate{
 
@@ -16,36 +17,54 @@ class SHhomeViewController: UIViewController ,UIScrollViewDelegate{
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var btn1: UIButton!
     
- 
-  
+    
+    var maindata : SHmainObject?
  
     var color :[UIColor] = [UIColor.blue ,UIColor.black,UIColor.red,UIColor.gray]
     var frame = CGRect(x: 0, y: 0, width: 0, height: 0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      
+
         SHhomeTV.dataSource = self
         SHhomeTV.delegate = self
         
-        pageControl.numberOfPages = color.count
+        let nib = UINib.init(nibName: "DefaultTableViewCell", bundle: nil)
+        self.SHhomeTV.register(nib, forCellReuseIdentifier: "defaultCell")
         
-       SHcategoryADView.frame.size.width = view.frame.size.width
-        print( SHcategoryADView.frame.size.width)
-        for index in 0..<color.count{
-            frame.origin.x = SHcategoryADView.frame.size.width * CGFloat(index)
-            frame.size = SHcategoryADView.frame.size
+        pageControl.numberOfPages = color.count
+        SHcategoryADView.frame.size.width = view.frame.size.width
+    
+      
+        
+        if maindata != nil{
+            for index in 0..<(maindata?.data?.count)!{
+                
+                frame.origin.x = SHcategoryADView.frame.size.width * CGFloat(index)
+                frame.size = SHcategoryADView.frame.size
+                let imageview = UIImageView(frame: frame)
+                let url = URL(string: (maindata?.reco?[0].pro_img)!)
+                imageview.kf.setImage(with: url)
+                self.SHcategoryADView.addSubview(imageview)
+            }
             
-            let view = UIView(frame: frame)
-            view.backgroundColor = color[index]
-            self.SHcategoryADView.addSubview(view)
+        }else{
+             for index in 0..<color.count{
+               
+                frame.origin.x = SHcategoryADView.frame.size.width * CGFloat(index)
+                frame.size = SHcategoryADView.frame.size
+                let imageview = UIImageView(frame: frame)
+                imageview.image = #imageLiteral(resourceName: "appimgEx")
+                self.SHcategoryADView.addSubview(imageview)
+            }
+            
         }
         
     
         SHcategoryADView.contentSize.width =  SHcategoryADView.frame.size.width * CGFloat(color.count)
         SHcategoryADView.alwaysBounceVertical = false
         SHcategoryADView.alwaysBounceHorizontal = false
-        
         SHcategoryADView.delegate = self
         
         
@@ -84,6 +103,7 @@ class SHhomeViewController: UIViewController ,UIScrollViewDelegate{
     }
     
     func gotoCategory(){
+        
         let nextview = UIStoryboard.init(name: "StoreHome", bundle: nil).instantiateViewController(withIdentifier: "categoryView") as! SHcategoryViewController
         addChildViewController(nextview)
         let transition = CATransition()
@@ -141,25 +161,46 @@ extension SHhomeViewController : UITableViewDataSource{
             return 1
         }
         else{
+            if maindata != nil{
+                 return gino(maindata?.data?.count)
+                
+            }
+            else{
+                return 1
+            }
             
-        return 20
+            
             
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0{
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: "adCell") as! SHADTableViewCell
-      
         
-        return cell
+        if indexPath.section == 0{
+        
+            let cell = tableView.dequeueReusableCell(withIdentifier: "adCell") as! SHADTableViewCell
+            return cell
+            
+           
         }
         else{
-              let cell = tableView.dequeueReusableCell(withIdentifier: "SHhomeCell") as! SHhomeTableViewCell
-           
-            
-            return cell
+            if maindata == nil{
+                tableView.separatorColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+                let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell") as! DefaultTableViewCell
+                cell.infoLB.text = "위치에 기반한 상품이 없습니다."
+                
+                return cell
+                
+            }else{
+                tableView.separatorColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+                let cell = tableView.dequeueReusableCell(withIdentifier: "SHhomeCell") as! SHhomeTableViewCell
+                cell.oriprice.text = String( gino(maindata?.data![indexPath.row].pro_price))
+                cell.price.text = String(gino(maindata?.data![indexPath.row].pro_sale_price))
+                cell.productname.text =  maindata?.data![indexPath.row].pro_name
+                cell.discountper.text = String(gino(maindata?.data![indexPath.row].pro_sale_price)/gino(maindata?.data![indexPath.row].pro_price)*100)
+                return cell
+                
+            }
             
         }
     }
@@ -174,9 +215,12 @@ extension SHhomeViewController : UITableViewDelegate{
         if indexPath.section == 0{
             
             }else{
+            if maindata?.data?.count != 0{
             let nextview = UIStoryboard.init(name: "StoreHome", bundle: nil).instantiateViewController(withIdentifier: "detailView") as! SHhomeDetailViewController
             
             navigationController?.pushViewController(nextview, animated: true)
+            
+            }
             
         }
     }

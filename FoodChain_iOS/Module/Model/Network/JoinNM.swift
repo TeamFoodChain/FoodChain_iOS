@@ -41,10 +41,10 @@ class JoinNM :NetworkDelegate{
         
     }
   
-    func nativeOwnerJoin(sup_pw:String, sup_name:String, sup_email:String, sup_phone:String, sup_regist_num:String, mar_name:String, mar_locate_lat:String, mar_locate_long:String, mar_addr:String, completion: @escaping (Join) -> Void) {
+    func nativeOwnerJoin(sup_pw:String, sup_name:String, sup_email:String, sup_phone:String, sup_regist_num:String, mar_name:String, mar_locate_lat:Double, mar_locate_long:Double, mar_addr:String, completion: @escaping (Join) -> Void) {
         let url = "\(baseURL)/users/signup/supplier"
         
-        let parameters = [
+        let parameters :[String:Any] = [
             "sup_name" : sup_name,
             "sup_email" : sup_email,
             "sup_phone": sup_phone,
@@ -107,10 +107,10 @@ class JoinNM :NetworkDelegate{
         
     }
     
-    func nativeKakaoOwnerJoin(sup_pw:String, sup_name:String, sup_email:String, sup_phone:String, sup_regist_num:String, mar_name:String, mar_locate_lat:String, mar_locate_long:String, mar_addr:String,sup_id:String, completion: @escaping (Join) -> Void) {
+    func nativeKakaoOwnerJoin(sup_pw:String, sup_name:String, sup_email:String, sup_phone:String, sup_regist_num:String, mar_name:String, mar_locate_lat:Double, mar_locate_long:Double, mar_addr:String,sup_id:String, completion: @escaping (Join) -> Void) {
         let url = "\(baseURL)/users/signup/supplier"
         
-        let parameters = [
+        let parameters :[String:Any] = [
             "sup_name" : sup_name,
             "sup_email" : sup_email,
             "sup_phone": sup_phone,

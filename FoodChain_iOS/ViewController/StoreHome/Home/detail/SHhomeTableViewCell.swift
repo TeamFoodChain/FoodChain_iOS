@@ -11,7 +11,12 @@ import UIKit
 class SHhomeTableViewCell: UITableViewCell {
 
     
-     
+    @IBOutlet weak var productImg: UIImageView!
+    @IBOutlet weak var productname: UILabel!
+    @IBOutlet weak var discountper: UILabel!
+    @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var oriprice: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

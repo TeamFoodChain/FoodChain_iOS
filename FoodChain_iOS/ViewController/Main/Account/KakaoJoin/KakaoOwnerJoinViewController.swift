@@ -16,8 +16,8 @@ class KakaoOwnerJoinViewController: UIViewController, addressDelegate {
     var KakaoNickname:String = ""
     var check: Int = 0
     
-    var geolong :String = ""
-    var geolat : String = ""
+    var geolong :Double = 0.0
+    var geolat : Double = 0.0
     
     
     @IBOutlet weak var ownernameTF: UITextField!
@@ -59,7 +59,7 @@ class KakaoOwnerJoinViewController: UIViewController, addressDelegate {
         
     }
     
-    func Response(address: String, long: String, lat: String) {
+    func Response(address: String, long: Double, lat: Double) {
         companyadress1TF.text = address
         companyadress1TF.sizeToFit()
         print(long)

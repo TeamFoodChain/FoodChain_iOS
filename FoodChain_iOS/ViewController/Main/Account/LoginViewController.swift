@@ -7,14 +7,16 @@
 //
 
 import UIKit
-
+import SwiftyJSON
 class LoginViewController: UIViewController {
     
    
     
     let loginManager = LoginNM()
+    var mainget = StorehomeMainNM()
     
     
+ 
     func getAppDelegate() -> AppDelegate!{
         return UIApplication.shared.delegate as! AppDelegate
     }
@@ -50,7 +52,7 @@ class LoginViewController: UIViewController {
 
     @IBAction func KakaoLoginAction(_ sender: Any) {
         
-       KakaoJoinModule().KakaoLogin(view: self)
+       KakaoJoinModule().KakaoLogin(view: self )
         
     }
     
@@ -64,9 +66,13 @@ class LoginViewController: UIViewController {
         }
         else{
         loginManager.nativelogin(nativeid: gsno(emailphoneTF.text), password: gsno(passTF.text)) { [weak self](natlogin) in
+           
             if natlogin.message == "Success Signin"{
                 let mainview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbarview") as! TabBarViewController
                 
+                print(natlogin.cate_flag!)
+                print(natlogin.identify!)
+                print(natlogin.locate_flag!)
                 
                 let userdata = UserDefaults.standard
                 userdata.set(natlogin.token, forKey: "usertoken")
@@ -75,11 +81,31 @@ class LoginViewController: UIViewController {
                 userdata.set(natlogin.locate_flag,forKey: "selectlocation")
                 userdata.synchronize()
                 
+                let token = UserDefaults.standard.string(forKey: "usertoken")
+               
+                self?.mainget.getmaindata(token: token!, completion: { [weak self](maindata) in
+                    
+                    if maindata.message == "Success to Get Data"{
+                    
+                         print(SHmainObject.CodingKeys.data.stringValue)
                 
+                    
+                        self?.present(mainview, animated: true, completion: nil)
+                        
+                    }
+                    else{
+                      
+                        self?.present(mainview, animated: true, completion: nil)
+                        
+                        
+                    }
+                    
+                })
                 
-               self?.present(mainview, animated: true, completion: nil)
+            
                 
             }else if natlogin.message == "Incorrect Information"{
+               
                 let alertController = UIAlertController(title: "",message: "로그인 정보가 올바르지 않습니다.", preferredStyle: UIAlertControllerStyle.alert)
                 let cancelButton = UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: nil)
                 alertController.addAction(cancelButton)
@@ -88,7 +114,7 @@ class LoginViewController: UIViewController {
                 
                 
             }else if natlogin.message == "Wrong Password"{
-                
+               
                 let alertController = UIAlertController(title: "",message: "비밀번호가 맞지 않습니다.", preferredStyle: UIAlertControllerStyle.alert)
                 let cancelButton = UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: nil)
                 alertController.addAction(cancelButton)
@@ -96,6 +122,7 @@ class LoginViewController: UIViewController {
                 
                 
             }else{
+                
                 let alertController = UIAlertController(title: "",message: "네트워크 문제입니다.", preferredStyle: UIAlertControllerStyle.alert)
                 let cancelButton = UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: nil)
                 alertController.addAction(cancelButton)

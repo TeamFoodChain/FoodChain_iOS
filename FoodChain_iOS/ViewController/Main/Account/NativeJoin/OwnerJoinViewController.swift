@@ -28,8 +28,8 @@ class OwnerJoinViewController: UIViewController,  addressDelegate{
     @IBOutlet weak var companynumcheck: UIImageView!
     
     var check :Int = 0
-    var geolong :String = ""
-    var geolat : String = ""
+    var geolong :Double = 0.0
+    var geolat : Double = 0.0
     
    
     
@@ -58,7 +58,7 @@ class OwnerJoinViewController: UIViewController,  addressDelegate{
         self.navigationItem.leftBarButtonItem = newBackButton
     }
    
-    func Response(address: String, long: String, lat: String) {
+    func Response(address: String, long: Double, lat: Double) {
         companyad1TF.text = address
         companyad1TF.sizeToFit()
         print(long)

@@ -17,7 +17,7 @@
         <!--Store Home View Controller-->
         <scene sceneID="pK3-pk-ogP">
             <objects>
-                <viewController id="qWm-bo-qHf" customClass="StoreHomeViewController" customModule="FoodChain_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="firstview" id="qWm-bo-qHf" customClass="StoreHomeViewController" customModule="FoodChain_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aay-Zw-wVf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,7 +51,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="3717.5999999999999" y="-781.25937031484261"/>
+            <point key="canvasLocation" x="3766" y="-1109"/>
         </scene>
         <!--홈-->
         <scene sceneID="E5R-jp-oWG">
@@ -83,34 +83,30 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iv5-2G-c1W">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="97"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mmf-8c-gSe">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mmf-8c-gSe">
                                                             <rect key="frame" x="0.0" y="0.0" width="94" height="97"/>
-                                                            <color key="backgroundColor" red="1" green="0.61775716150000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <state key="normal" title="Button"/>
+                                                            <state key="normal" image="fruits"/>
                                                             <connections>
                                                                 <action selector="Btn1Action:" destination="wqh-Yo-kt3" eventType="touchUpInside" id="yfe-8h-eIu"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDX-r2-Kkq">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDX-r2-Kkq">
                                                             <rect key="frame" x="94" y="0.0" width="93.5" height="97"/>
-                                                            <color key="backgroundColor" red="1" green="0.1772533634" blue="0.1470409627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <state key="normal" title="Button"/>
+                                                            <state key="normal" image="drink"/>
                                                             <connections>
                                                                 <action selector="Btn2Action:" destination="wqh-Yo-kt3" eventType="touchUpInside" id="1sT-Ne-Uqd"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9R-g9-yry">
-                                                            <rect key="frame" x="187.5" y="0.0" width="94" height="97"/>
-                                                            <color key="backgroundColor" red="0.0" green="0.33132624379999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <state key="normal" title="Button"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9R-g9-yry">
+                                                            <rect key="frame" x="187.5" y="0.0" width="93.5" height="97"/>
+                                                            <state key="normal" image="health"/>
                                                             <connections>
                                                                 <action selector="Btn3Action:" destination="wqh-Yo-kt3" eventType="touchUpInside" id="mca-SZ-WQh"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mvm-VT-PPk">
-                                                            <rect key="frame" x="281.5" y="0.0" width="93.5" height="97"/>
-                                                            <color key="backgroundColor" red="0.74901960779999999" green="0.37647058820000001" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <state key="normal" title="Button"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mvm-VT-PPk">
+                                                            <rect key="frame" x="281" y="0.0" width="94" height="97"/>
+                                                            <state key="normal" image="snack"/>
                                                             <connections>
                                                                 <action selector="Btn4Action:" destination="wqh-Yo-kt3" eventType="touchUpInside" id="rrq-Zr-tms"/>
                                                             </connections>
@@ -134,34 +130,30 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OAe-Ab-9Ya">
                                                     <rect key="frame" x="0.0" y="97" width="375" height="97"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieh-qP-qGH">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieh-qP-qGH">
                                                             <rect key="frame" x="0.0" y="0.0" width="94" height="97"/>
-                                                            <color key="backgroundColor" red="0.98408447750000005" green="1" blue="0.25210385130000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <state key="normal" title="Button"/>
+                                                            <state key="normal" image="sidedish"/>
                                                             <connections>
                                                                 <action selector="Btn5Action:" destination="wqh-Yo-kt3" eventType="touchUpInside" id="z9h-97-4fK"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfj-FA-WFw">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfj-FA-WFw">
                                                             <rect key="frame" x="94" y="0.0" width="93.5" height="97"/>
-                                                            <color key="backgroundColor" red="0.18039215689999999" green="0.5450980392" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <state key="normal" title="Button"/>
+                                                            <state key="normal" image="diet"/>
                                                             <connections>
                                                                 <action selector="Btn6Action:" destination="wqh-Yo-kt3" eventType="touchUpInside" id="peT-jt-2Ye"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kiz-JA-e3d">
-                                                            <rect key="frame" x="187.5" y="0.0" width="94" height="97"/>
-                                                            <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <state key="normal" title="Button"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kiz-JA-e3d">
+                                                            <rect key="frame" x="187.5" y="0.0" width="93.5" height="97"/>
+                                                            <state key="normal" image="meat"/>
                                                             <connections>
                                                                 <action selector="Btn7Action:" destination="wqh-Yo-kt3" eventType="touchUpInside" id="MLR-OV-cN1"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bie-rn-rJc">
-                                                            <rect key="frame" x="281.5" y="0.0" width="93.5" height="97"/>
-                                                            <color key="backgroundColor" red="0.18039215689999999" green="0.5450980392" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <state key="normal" title="Button"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bie-rn-rJc">
+                                                            <rect key="frame" x="281" y="0.0" width="94" height="97"/>
+                                                            <state key="normal" image="pet"/>
                                                             <connections>
                                                                 <action selector="Btn8Action:" destination="wqh-Yo-kt3" eventType="touchUpInside" id="xEs-iA-YUc"/>
                                                             </connections>
@@ -207,15 +199,15 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="adCell" id="0eb-wo-MW9" customClass="SHADTableViewCell" customModule="FoodChain_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="410" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="adCell" rowHeight="87" id="0eb-wo-MW9" customClass="SHADTableViewCell" customModule="FoodChain_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="410" width="375" height="87"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0eb-wo-MW9" id="7lO-cA-mJx">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="86.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DN4-Np-3am">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="couponbannerEx" translatesAutoresizingMaskIntoConstraints="NO" id="DN4-Np-3am">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="86.5"/>
                                                     <color key="backgroundColor" red="1" green="0.66181424675586242" blue="0.14768864790496572" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </imageView>
                                             </subviews>
@@ -228,13 +220,13 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SHhomeCell" rowHeight="375" id="YdH-13-2Se" customClass="SHhomeTableViewCell" customModule="FoodChain_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="454" width="375" height="375"/>
+                                        <rect key="frame" x="0.0" y="497" width="375" height="375"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YdH-13-2Se" id="mGE-0l-JxR">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="374.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HDg-HZ-g6s">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appimgEx" translatesAutoresizingMaskIntoConstraints="NO" id="HDg-HZ-g6s">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="374.5"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aWJ-Ml-Mhp">
@@ -303,6 +295,13 @@
                                             <constraint firstAttribute="trailing" secondItem="aWJ-Ml-Mhp" secondAttribute="trailing" id="nWd-JC-x3f"/>
                                             <constraint firstItem="aWJ-Ml-Mhp" firstAttribute="centerX" secondItem="YdH-13-2Se" secondAttribute="centerX" id="tja-lh-FTb"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="discountper" destination="kdX-Tt-50V" id="jmp-5e-wuO"/>
+                                            <outlet property="oriprice" destination="Q3k-EU-X0F" id="at4-rB-oH1"/>
+                                            <outlet property="price" destination="5OI-q0-hwJ" id="yWv-O6-4F8"/>
+                                            <outlet property="productImg" destination="HDg-HZ-g6s" id="yaI-Ql-qUZ"/>
+                                            <outlet property="productname" destination="b2K-TO-Awc" id="ziW-Tb-xbj"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -366,44 +365,45 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="timesaleCell" rowHeight="230" id="Kru-ty-toL" customClass="SHtimesaleTableViewCell" customModule="FoodChain_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="120" width="375" height="230"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="timesaleCell" rowHeight="468" id="Kru-ty-toL" customClass="SHtimesaleTableViewCell" customModule="FoodChain_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="120" width="375" height="468"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kru-ty-toL" id="0Gl-ke-qmc">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="468"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blurpicture" translatesAutoresizingMaskIntoConstraints="NO" id="1s3-MC-lxm">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="178"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="1s3-MC-lxm" secondAttribute="height" multiplier="375:178" id="WyD-u4-ioy"/>
+                                                        <constraint firstAttribute="width" secondItem="1s3-MC-lxm" secondAttribute="height" multiplier="1:1" id="cZh-GI-LSQ"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="잠시후 공개됩니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbp-bM-PiN">
+                                                    <rect key="frame" x="113" y="175" width="149" height="24"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="픽업가능 시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcQ-tM-bOy">
-                                                    <rect key="frame" x="149" y="186" width="77" height="17"/>
+                                                    <rect key="frame" x="149" y="400" width="77" height="17"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="AcQ-tM-bOy" secondAttribute="height" multiplier="77:17" id="P96-Bg-fnD"/>
+                                                        <constraint firstAttribute="width" secondItem="AcQ-tM-bOy" secondAttribute="height" multiplier="77:17" id="tK9-7j-aa7"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.18039215689999999" green="0.5450980392" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="잠시후 공개됩니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbp-bM-PiN">
-                                                    <rect key="frame" x="113" y="77" width="149" height="24"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="hbp-bM-PiN" firstAttribute="centerX" secondItem="1s3-MC-lxm" secondAttribute="centerX" id="1cz-1n-bUm"/>
-                                                <constraint firstAttribute="bottom" secondItem="AcQ-tM-bOy" secondAttribute="bottom" constant="26.5" id="Rhb-XZ-hmg"/>
-                                                <constraint firstItem="hbp-bM-PiN" firstAttribute="centerY" secondItem="1s3-MC-lxm" secondAttribute="centerY" id="UPA-Xk-xIR"/>
-                                                <constraint firstItem="AcQ-tM-bOy" firstAttribute="top" secondItem="1s3-MC-lxm" secondAttribute="bottom" constant="8" id="Uv9-ES-nMd"/>
-                                                <constraint firstAttribute="trailing" secondItem="1s3-MC-lxm" secondAttribute="trailing" id="Vcz-8Z-56M"/>
-                                                <constraint firstItem="AcQ-tM-bOy" firstAttribute="centerX" secondItem="1s3-MC-lxm" secondAttribute="centerX" id="bBe-qX-gK9"/>
-                                                <constraint firstItem="1s3-MC-lxm" firstAttribute="leading" secondItem="0Gl-ke-qmc" secondAttribute="leading" id="jEC-ap-NTM"/>
-                                                <constraint firstItem="1s3-MC-lxm" firstAttribute="top" secondItem="0Gl-ke-qmc" secondAttribute="top" id="nCc-oY-uFb"/>
+                                                <constraint firstItem="1s3-MC-lxm" firstAttribute="top" secondItem="0Gl-ke-qmc" secondAttribute="top" id="0c8-y9-arJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="1s3-MC-lxm" secondAttribute="trailing" id="EcV-f2-Z37"/>
+                                                <constraint firstItem="1s3-MC-lxm" firstAttribute="leading" secondItem="0Gl-ke-qmc" secondAttribute="leading" id="UwA-VE-EED"/>
+                                                <constraint firstItem="AcQ-tM-bOy" firstAttribute="centerX" secondItem="1s3-MC-lxm" secondAttribute="centerX" id="WAs-lN-SyF"/>
+                                                <constraint firstItem="1s3-MC-lxm" firstAttribute="centerX" secondItem="0Gl-ke-qmc" secondAttribute="centerX" id="d5l-7H-Cpv"/>
+                                                <constraint firstItem="AcQ-tM-bOy" firstAttribute="top" secondItem="1s3-MC-lxm" secondAttribute="bottom" constant="25" id="dbr-Eu-7rW"/>
+                                                <constraint firstItem="hbp-bM-PiN" firstAttribute="centerX" secondItem="1s3-MC-lxm" secondAttribute="centerX" id="djD-iU-05b"/>
+                                                <constraint firstItem="hbp-bM-PiN" firstAttribute="centerY" secondItem="1s3-MC-lxm" secondAttribute="centerY" id="eYO-c9-Djz"/>
+                                                <constraint firstAttribute="bottom" secondItem="AcQ-tM-bOy" secondAttribute="bottom" constant="51" id="k66-sz-7fK"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -1044,21 +1044,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OlE-X4-DM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2828" y="715.59220389805103"/>
+            <point key="canvasLocation" x="2814" y="765"/>
         </scene>
     </scenes>
     <resources>
         <image name="2GridX" width="21" height="21"/>
         <image name="4GridColor" width="21" height="21"/>
         <image name="Back" width="16" height="28"/>
+        <image name="appimgEx" width="381" height="217"/>
         <image name="back_arrow" width="17" height="17"/>
         <image name="blurpicture" width="366" height="201"/>
         <image name="cartIcon" width="22" height="22"/>
+        <image name="couponbannerEx" width="375" height="62"/>
+        <image name="diet" width="100" height="115"/>
+        <image name="drink" width="100" height="115"/>
         <image name="favoriteHeart" width="20" height="18"/>
+        <image name="fruits" width="100" height="115"/>
+        <image name="health" width="100" height="115"/>
+        <image name="meat" width="100" height="115"/>
+        <image name="pet" width="104" height="117"/>
         <image name="pic" width="144" height="139"/>
         <image name="picture" width="376" height="287"/>
         <image name="restrauntPic" width="82" height="82"/>
         <image name="runIcon" width="15" height="15"/>
+        <image name="sidedish" width="100" height="115"/>
+        <image name="snack" width="100" height="115"/>
         <image name="storeIconGroup" width="24" height="24"/>
         <image name="storeSeachIcon" width="22" height="22"/>
         <image name="timeicon" width="42" height="42"/>

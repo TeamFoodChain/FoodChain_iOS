@@ -54,8 +54,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Thread.sleep(forTimeInterval: 1.0)
 
-        GMSServices.provideAPIKey("-------------------------------")
-        GMSPlacesClient.provideAPIKey("-------------------------------")
+        GMSServices.provideAPIKey("AIzaSyD91nnqjxPACv0e1t69sumj7haHpSLAOgY")
+        GMSPlacesClient.provideAPIKey("AIzaSyD91nnqjxPACv0e1t69sumj7haHpSLAOgY")
 
         // Override point for customization after application launch.
         return true

@@ -10,7 +10,7 @@ import UIKit
 
 protocol addressDelegate
 {
-    func Response(address: String , long:String ,lat:String)
+    func Response(address: String , long:Double ,lat:Double)
 }
 
 class SearchAdViewController: UIViewController {
@@ -49,7 +49,6 @@ class SearchAdViewController: UIViewController {
     }
 
     @objc func back(sender: UIBarButtonItem) {
-        
         
         
         navigationController?.popViewController(animated: true)
@@ -139,12 +138,16 @@ extension SearchAdViewController: UITableViewDataSource{
             let cell = tableView.dequeueReusableCell(withIdentifier: "adsearchCell") as! SearchAdTableViewCell
             cell.addressLB.text = "주소에 대한 결과가 없습니다."
             cell.addressLB.sizeToFit()
+            tableView.allowsSelection = false
+            tableView.separatorColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
                 return cell
                 
             }else{
                 let cell = tableView.dequeueReusableCell(withIdentifier: "adsearchCell") as! SearchAdTableViewCell
                 cell.addressLB.text = "주소를 입력해주세요"
                 cell.addressLB.sizeToFit()
+                tableView.allowsSelection = false
+                tableView.separatorColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
                 return cell
                 
             }
@@ -154,6 +157,7 @@ extension SearchAdViewController: UITableViewDataSource{
             let cell = tableView.dequeueReusableCell(withIdentifier: "adsearchCell") as! SearchAdTableViewCell
             cell.addressLB.text = jusoObject[indexPath.row].roadAddr
             cell.addressLB.sizeToFit()
+            tableView.allowsSelection = true
             return cell
             
         }
@@ -162,12 +166,15 @@ extension SearchAdViewController: UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let geoNM = SearchAddressNM()
-        
+        let locate = LocateNM()
+
+      
         if validation == 0{
         
         let add = gsno(jusoObject[indexPath.row].roadAddrPart1)
+            
             geoNM.geoconding(keyword: add ) { [weak self](geo) in
-                    self?.delegate?.Response(address:(self?.jusoObject[indexPath.row].roadAddrPart1)!, long:  String((geo.results?.first?.geometry?.location?.lng)!) , lat:   String((geo.results?.first?.geometry?.location?.lat)!))
+                    self?.delegate?.Response(address:(self?.jusoObject[indexPath.row].roadAddrPart1)!, long:  (geo.results?.first?.geometry?.location?.lng)! , lat:   (geo.results?.first?.geometry?.location?.lat)!)
                     self?.navigationController?.popViewController(animated: true)
         
             }
@@ -181,9 +188,13 @@ extension SearchAdViewController: UITableViewDataSource{
                 
                 let geolong :Double = (geo.results?.first?.geometry?.location?.lng)!
                 let geolat: Double = (geo.results?.first?.geometry?.location?.lat)!
+            
+                print(add)
+               print(geolong)
+                print(geolat)
                 
-                let locate = LocateNM()
-                locate.locatesend(add: add, lat: String(geolat) ,long: String(geolong), completion: { [weak self](locate) in
+                
+                locate.locatesend(add: add, lat: geolat ,long: geolong, completion: { [weak self](locate) in
                     if locate.message == "Success to Register the Address"{
                         UserDefaults.standard.set(1,forKey: "selectlocation")
                         UserDefaults.standard.synchronize()
@@ -204,7 +215,9 @@ extension SearchAdViewController: UITableViewDataSource{
         
       
        
-    }
+            }
+            
+        
     
     
     }

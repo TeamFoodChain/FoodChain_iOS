@@ -13,9 +13,6 @@ import SwiftyJSON
 
 class ChoiceNM : NetworkDelegate{
     
-   
-    
-    
     func favoritechoice(pro_cate: [String],  completion: @escaping (Join) -> Void){
         
         let url = "\(baseURL)/users/choice/set"

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		520FA11820EA2DB60087C2B8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 520FA11720EA2DB60087C2B8 /* Info.plist */; };
+		5218A5B520F89850003FC0B9 /* Reco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5218A5B420F89850003FC0B9 /* Reco.swift */; };
+		5218A5B720F8988A003FC0B9 /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5218A5B620F8988A003FC0B9 /* Coupon.swift */; };
 		522A24F520EA646200D1C272 /* KakaoJoinModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A24F420EA646200D1C272 /* KakaoJoinModule.swift */; };
 		522B10CC20E9D1F70002386D /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522B10CB20E9D1F70002386D /* KakaoOpenSDK.framework */; };
 		522F55DB20F0EA960004A8FE /* SHhomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522F55DA20F0EA960004A8FE /* SHhomeDetailViewController.swift */; };
@@ -27,7 +29,6 @@
 		52634A8720EB4C090028A33E /* KakaoJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52634A8620EB4C090028A33E /* KakaoJoinViewController.swift */; };
 		52634FE120F5C04E00C0673E /* JoinNM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52634FE020F5C04E00C0673E /* JoinNM.swift */; };
 		52634FE620F5C10300C0673E /* NetworkDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52634FE520F5C10300C0673E /* NetworkDelegate.swift */; };
-		52634FE820F5C2EC00C0673E /* Join.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52634FE720F5C2EC00C0673E /* Join.swift */; };
 		52634FEA20F5FA0300C0673E /* SearchAddressNM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52634FE920F5FA0300C0673E /* SearchAddressNM.swift */; };
 		52634FF220F6007900C0673E /* SearchAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52634FEE20F6007900C0673E /* SearchAddress.swift */; };
 		52634FF320F6007900C0673E /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52634FEF20F6007900C0673E /* Common.swift */; };
@@ -59,8 +60,10 @@
 		52B5437A20F658F300C64E51 /* Southwest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5437220F658F300C64E51 /* Southwest.swift */; };
 		52B5437C20F6985700C64E51 /* LoginNM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5437B20F6985700C64E51 /* LoginNM.swift */; };
 		52B5789B20F0A9E8008D551F /* SHADTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5789A20F0A9E8008D551F /* SHADTableViewCell.swift */; };
-		52B5CC4A20F84BFC001E3339 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5CC4920F84BFC001E3339 /* Data.swift */; };
-		52B5CC4C20F84D14001E3339 /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5CC4B20F84D14001E3339 /* Coupon.swift */; };
+		52B5CC5320F864AD001E3339 /* Join.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5CC5220F864AC001E3339 /* Join.swift */; };
+		52B5CC5720F864EF001E3339 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5CC5520F864EF001E3339 /* Data.swift */; };
+		52B5CC5820F864EF001E3339 /* SHmainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5CC5620F864EF001E3339 /* SHmainObject.swift */; };
+		52B5CC5A20F86529001E3339 /* StorehomeMainNM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B5CC5920F86529001E3339 /* StorehomeMainNM.swift */; };
 		52B782AE20F16E9D00F1E51A /* SHcategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B782AD20F16E9D00F1E51A /* SHcategoryCollectionViewCell.swift */; };
 		52B9E55D20F7D14F00EEA52B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B9E55C20F7D14E00EEA52B /* Assets.xcassets */; };
 		52B9E55F20F7EF2300EEA52B /* ChoiceNM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9E55E20F7EF2300EEA52B /* ChoiceNM.swift */; };
@@ -86,6 +89,8 @@
 
 /* Begin PBXFileReference section */
 		520FA11720EA2DB60087C2B8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5218A5B420F89850003FC0B9 /* Reco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reco.swift; sourceTree = "<group>"; };
+		5218A5B620F8988A003FC0B9 /* Coupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
 		522A24F420EA646200D1C272 /* KakaoJoinModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoJoinModule.swift; sourceTree = "<group>"; };
 		522B10CB20E9D1F70002386D /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
 		522B10CE20E9D3FC0002386D /* KakaoOpenSDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KakaoOpenSDK-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -106,7 +111,6 @@
 		52634A8620EB4C090028A33E /* KakaoJoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoJoinViewController.swift; sourceTree = "<group>"; };
 		52634FE020F5C04E00C0673E /* JoinNM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinNM.swift; sourceTree = "<group>"; };
 		52634FE520F5C10300C0673E /* NetworkDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDelegate.swift; sourceTree = "<group>"; };
-		52634FE720F5C2EC00C0673E /* Join.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Join.swift; sourceTree = "<group>"; };
 		52634FE920F5FA0300C0673E /* SearchAddressNM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressNM.swift; sourceTree = "<group>"; };
 		52634FEE20F6007900C0673E /* SearchAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAddress.swift; sourceTree = "<group>"; };
 		52634FEF20F6007900C0673E /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -138,8 +142,10 @@
 		52B5437220F658F300C64E51 /* Southwest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Southwest.swift; sourceTree = "<group>"; };
 		52B5437B20F6985700C64E51 /* LoginNM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNM.swift; sourceTree = "<group>"; };
 		52B5789A20F0A9E8008D551F /* SHADTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHADTableViewCell.swift; sourceTree = "<group>"; };
-		52B5CC4920F84BFC001E3339 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		52B5CC4B20F84D14001E3339 /* Coupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
+		52B5CC5220F864AC001E3339 /* Join.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Join.swift; sourceTree = "<group>"; };
+		52B5CC5520F864EF001E3339 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		52B5CC5620F864EF001E3339 /* SHmainObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHmainObject.swift; sourceTree = "<group>"; };
+		52B5CC5920F86529001E3339 /* StorehomeMainNM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorehomeMainNM.swift; sourceTree = "<group>"; };
 		52B782AD20F16E9D00F1E51A /* SHcategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHcategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		52B9E55C20F7D14E00EEA52B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52B9E55E20F7EF2300EEA52B /* ChoiceNM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceNM.swift; sourceTree = "<group>"; };
@@ -192,7 +198,6 @@
 			isa = PBXGroup;
 			children = (
 				52C6D03A20ECC9D00050A7C8 /* SHhomeViewController.swift */,
-				52CF7F9120EFA05700B3F13E /* SHhomeTableViewCell.swift */,
 				52B5789A20F0A9E8008D551F /* SHADTableViewCell.swift */,
 			);
 			path = main;
@@ -211,6 +216,7 @@
 		522F55DE20F0F2F00004A8FE /* detail */ = {
 			isa = PBXGroup;
 			children = (
+				52CF7F9120EFA05700B3F13E /* SHhomeTableViewCell.swift */,
 				522F55DA20F0EA960004A8FE /* SHhomeDetailViewController.swift */,
 				5258A6B620F29372006C696B /* SHhomeDetailTableViewCell.swift */,
 				52755B6C20F2C0FD009453A7 /* SHhomeDetailTableViewCell.xib */,
@@ -256,11 +262,10 @@
 		52634FDB20F5BCDD00C0673E /* Object */ = {
 			isa = PBXGroup;
 			children = (
+				52B5CC5220F864AC001E3339 /* Join.swift */,
+				52B5CC5420F864EF001E3339 /* Storehome_main */,
 				52B5436A20F658F300C64E51 /* Geoconding */,
 				52634FED20F6007900C0673E /* SearchAddress */,
-				52634FE720F5C2EC00C0673E /* Join.swift */,
-				52B5CC4920F84BFC001E3339 /* Data.swift */,
-				52B5CC4B20F84D14001E3339 /* Coupon.swift */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -341,6 +346,17 @@
 				52B5437220F658F300C64E51 /* Southwest.swift */,
 			);
 			path = Geoconding;
+			sourceTree = "<group>";
+		};
+		52B5CC5420F864EF001E3339 /* Storehome_main */ = {
+			isa = PBXGroup;
+			children = (
+				52B5CC5520F864EF001E3339 /* Data.swift */,
+				52B5CC5620F864EF001E3339 /* SHmainObject.swift */,
+				5218A5B420F89850003FC0B9 /* Reco.swift */,
+				5218A5B620F8988A003FC0B9 /* Coupon.swift */,
+			);
+			path = Storehome_main;
 			sourceTree = "<group>";
 		};
 		52CF7F8E20EF9FA400B3F13E /* Home */ = {
@@ -466,6 +482,7 @@
 				52B5437B20F6985700C64E51 /* LoginNM.swift */,
 				52B9E55E20F7EF2300EEA52B /* ChoiceNM.swift */,
 				52B9E56520F82E9500EEA52B /* LocateNM.swift */,
+				52B5CC5920F86529001E3339 /* StorehomeMainNM.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -682,17 +699,18 @@
 				523EEE1A20F4877C00A87F9E /* SHtimesaleTableViewCell.swift in Sources */,
 				52B5437420F658F300C64E51 /* Location.swift in Sources */,
 				523EEE1820F45A3E00A87F9E /* MFregister2ViewController.swift in Sources */,
+				52B5CC5A20F86529001E3339 /* StorehomeMainNM.swift in Sources */,
 				52634FF520F6007900C0673E /* Juso.swift in Sources */,
 				52634A8720EB4C090028A33E /* KakaoJoinViewController.swift in Sources */,
 				52B5437820F658F300C64E51 /* GeoResults.swift in Sources */,
 				52FBDEED20E87AC800AEEB1E /* Extension.swift in Sources */,
-				52B5CC4A20F84BFC001E3339 /* Data.swift in Sources */,
+				52B5CC5720F864EF001E3339 /* Data.swift in Sources */,
 				52755B7520F2D966009453A7 /* SHhomeMenuCollectionViewCell.swift in Sources */,
 				528E324120EC7CDB0082D52C /* KakaoSelectUsertypeViewController.swift in Sources */,
-				52B5CC4C20F84D14001E3339 /* Coupon.swift in Sources */,
 				52FBDEF620E88B3C00AEEB1E /* StoreHomeViewController.swift in Sources */,
 				52C6D03B20ECC9D00050A7C8 /* SHhomeViewController.swift in Sources */,
 				523553EE20F33CA600BA50DA /* ExdateEmptyTableViewCell.swift in Sources */,
+				52B5CC5320F864AD001E3339 /* Join.swift in Sources */,
 				523553F220F3789800BA50DA /* MFregisterViewController.swift in Sources */,
 				52FBDF0720E895C600AEEB1E /* FavoriteViewController.swift in Sources */,
 				528E324320EC7E090082D52C /* KakaoOwnerJoinViewController.swift in Sources */,
@@ -703,6 +721,7 @@
 				528A517120F52FB300DB39FC /* SHmarketCollectionViewCell.swift in Sources */,
 				52755B8020F2FC71009453A7 /* ExdateViewController.swift in Sources */,
 				523EEE1C20F489B800A87F9E /* SHtimesaleViewController.swift in Sources */,
+				5218A5B720F8988A003FC0B9 /* Coupon.swift in Sources */,
 				52FBDF0920E8966F00AEEB1E /* FavoriteCollectionViewCell.swift in Sources */,
 				525FCB8120EBAE9D0076C378 /* TermViewController.swift in Sources */,
 				52755B7E20F2FC63009453A7 /* UploadstoreViewController.swift in Sources */,
@@ -715,11 +734,13 @@
 				52FBDED820E8765F00AEEB1E /* LoginViewController.swift in Sources */,
 				52C6D03F20ECF85B0050A7C8 /* SHmarketViewController.swift in Sources */,
 				52B5437920F658F300C64E51 /* Address_components.swift in Sources */,
+				5218A5B520F89850003FC0B9 /* Reco.swift in Sources */,
 				52B5437520F658F300C64E51 /* Northeast.swift in Sources */,
 				52B5437320F658F300C64E51 /* Geometry.swift in Sources */,
 				52FBDEF420E8897800AEEB1E /* TabBarViewController.swift in Sources */,
 				52996EE320EC266500F33A6D /* SelectUsertypeViewController.swift in Sources */,
 				522A24F520EA646200D1C272 /* KakaoJoinModule.swift in Sources */,
+				52B5CC5820F864EF001E3339 /* SHmainObject.swift in Sources */,
 				52634FE620F5C10300C0673E /* NetworkDelegate.swift in Sources */,
 				52634A8420EB39D60028A33E /* JoinViewController.swift in Sources */,
 				52B9E55F20F7EF2300EEA52B /* ChoiceNM.swift in Sources */,
@@ -732,7 +753,6 @@
 				528A517620F533DA00DB39FC /* DefaultTableViewCell.swift in Sources */,
 				523553E820F3292900BA50DA /* MyRefrigeratorViewController.swift in Sources */,
 				52CF7F9220EFA05700B3F13E /* SHhomeTableViewCell.swift in Sources */,
-				52634FE820F5C2EC00C0673E /* Join.swift in Sources */,
 				52634FEA20F5FA0300C0673E /* SearchAddressNM.swift in Sources */,
 				52B9E56620F82E9500EEA52B /* LocateNM.swift in Sources */,
 				52634FF420F6007900C0673E /* Results.swift in Sources */,

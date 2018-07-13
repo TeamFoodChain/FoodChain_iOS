@@ -16,11 +16,11 @@ class LocateNM : NetworkDelegate{
     
     
     
-    func locatesend(add:String,lat:String,long:String,  completion: @escaping (Join) -> Void){
+    func locatesend(add:String,lat:Double,long:Double,  completion: @escaping (Join) -> Void){
         
         let url = "\(baseURL)/users/locate"
         
-        let parameter = [
+        let parameter :[String:Any] = [
             "locate_addr" : add,
             "locate_lat": lat,
             "locate_long":long

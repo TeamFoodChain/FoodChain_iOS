@@ -14,8 +14,7 @@ struct Join: Codable {
     var identify:Int?
     var cate_flag : Int?
     var locate_flag: Int?
-//    var data : [Data]?
-//    var coupon: Coupon?
+   
 
     
 }

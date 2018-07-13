@@ -32,6 +32,7 @@ class SHmarketViewController: UIViewController , CLLocationManagerDelegate,GMSMa
         locationTV.delegate = self
         locationTV.dataSource = self
         googleMaps.delegate = self
+        locationTV.separatorColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
@@ -110,6 +111,7 @@ extension SHmarketViewController : UITableViewDataSource{
             
         }
         else{
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell") as! DefaultTableViewCell
             
             return cell

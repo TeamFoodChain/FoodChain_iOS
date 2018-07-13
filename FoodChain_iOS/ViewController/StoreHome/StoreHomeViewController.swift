@@ -11,62 +11,39 @@ import Parchment
 
 class StoreHomeViewController: UIViewController {
 
-    
-    let loginview = LoginViewController()
-    let userdata = UserDefaults.standard
     let titleimg: UIImage = UIImage(named: "logo11")!
+    
+    let token = UserDefaults.standard.string(forKey: "usertoken")
+    
+    var maindata : SHmainObject?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-        let token = userdata.string(forKey: "usertoken")
-        let cate_flag = userdata.integer(forKey: "cate_flag")
-        let identify = userdata.integer(forKey: "identify")
-        let selectlocation = userdata.integer(forKey:"selectlocation")
-        
-      
-        
-        print(token)
-        print(cate_flag)
-        print(identify)
-        print(selectlocation)
+    
         
         
-       navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
-        
-       
         navigationItem.titleView = UIImageView.init(image: titleimg)
         
+        print("///////로그인 된후 유저디폴트")
+        print(UserDefaults.standard.string(forKey: "usertoken"))
+        print(UserDefaults.standard.integer(forKey: "cate_flag"))
+        print(UserDefaults.standard.integer(forKey: "identify"))
+        print(UserDefaults.standard.integer(forKey: "selectlocation"))
         
+    
         
-        if selectlocation == 0 {
-            let alert = UIAlertController(title: "동네를 설정하고 EAT DA 를 시작하세요", message: "많은 상품들이 당신의 주변에서 기다리고 있어요!", preferredStyle: .alert)
-            let cancelButton = UIAlertAction(title: "둘러보기", style: .default, handler: nil)
-            
-            let action = UIAlertAction(title: "동네 설정하러가기", style: .default) {[weak self] (action) -> Void in
-                let gotoselectloc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddressSearchView") as! SearchAdViewController
-               gotoselectloc.validation = 1
-                self?.navigationController?.pushViewController(gotoselectloc, animated: true)
-            }
-            alert.addAction(cancelButton)
-            alert.addAction(action)
-            self.present(alert, animated: true, completion: nil)
-            
-
-        }
-       if cate_flag == 0{
+       if UserDefaults.standard.integer(forKey: "cate_flag") == 0{
 
             let favoriteView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "favoritenaviview")
 
            present(favoriteView, animated: true, completion: nil)
 
         }
-       
-        
-
-        
+    
         
         //- Pageview Library 코드
         let storyboard = UIStoryboard(name: "StoreHome", bundle: nil)
@@ -83,9 +60,9 @@ class StoreHomeViewController: UIViewController {
             secondViewController,
             thirdViewController
             ])
-    
         
-        
+       
+     
         
         addChildViewController(pagingViewController)
         view.addSubview(pagingViewController.view)
@@ -109,19 +86,33 @@ class StoreHomeViewController: UIViewController {
             ])
         //
         
+        
+        
+        
        
         
             
     }
     override func viewWillAppear(_ animated: Bool) {
+        
+        if UserDefaults.standard.integer(forKey:"selectlocation") == 0 {
+            let alert = UIAlertController(title: "동네를 설정하고 \n EAT DA 를 시작하세요", message: "많은 상품들이 당신의 주변에서 기다리고 있어요!", preferredStyle: .alert)
+            let cancelButton = UIAlertAction(title: "둘러보기", style: .default, handler: nil)
+            
+            let action = UIAlertAction(title: "동네 설정하러가기", style: .default) {[weak self] (action) -> Void in
+                let gotoselectloc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddressSearchView") as! SearchAdViewController
+                gotoselectloc.validation = 1
+                self?.navigationController?.pushViewController(gotoselectloc, animated: true)
+            }
+            alert.addAction(cancelButton)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+            
+            
+        }
        
     }
   
-    
-  
-    
-
-   
 
 }
 

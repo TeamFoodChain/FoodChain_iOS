@@ -9,6 +9,9 @@
 import UIKit
 
 class SHADTableViewCell: UITableViewCell {
+    
+    
+    var imagearray :[UIImage] = []
 
     override func awakeFromNib() {
         super.awakeFromNib()
