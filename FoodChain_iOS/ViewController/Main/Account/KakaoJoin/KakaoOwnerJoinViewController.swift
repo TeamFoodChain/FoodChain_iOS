@@ -9,6 +9,8 @@
 import UIKit
 
 class KakaoOwnerJoinViewController: UIViewController, addressDelegate {
+    
+    let joinManager = JoinNM()
 
     var kakaoUserId :String = ""
     var KakaoNickname:String = ""
@@ -68,8 +70,9 @@ class KakaoOwnerJoinViewController: UIViewController, addressDelegate {
     
     func initAddTarget(){
         
-        owneremailTF.addTarget(self, action: #selector(duplicateCheck), for: .editingChanged)
-        
+        owneremailTF.addTarget(self, action: #selector(emailCheckcall), for: .editingChanged)
+        ownernumberTF.addTarget(self, action: #selector(numberCheckcall), for: .editingChanged)
+        companynumTF.addTarget(self, action:#selector(companynumbercheck) , for: .editingChanged)
         ownernameTF.addTarget(self, action: #selector(isValid), for: .editingChanged)
         owneremailTF.addTarget(self, action: #selector(isValid), for: .editingChanged)
         ownernumberTF.addTarget(self, action: #selector(isValid), for: .editingChanged)
@@ -83,7 +86,98 @@ class KakaoOwnerJoinViewController: UIViewController, addressDelegate {
         
     }
     
-    @objc func duplicateCheck(_ sender: UITextField) {
+    @objc func emailCheckcall(_ sender: UITextField) {
+        
+        if owneremailTF.text?.isEmpty == false{
+            
+            joinManager.emailcheck(email: gsno(owneremailTF.text)) { [weak self](emailchecking) in
+                
+                if emailchecking.message == "Success Email Check"{
+                    
+                    self?.emailCheck.image = #imageLiteral(resourceName: "Yes-Color")
+                    
+                }
+                else if emailchecking.message == "This Email Already Exists." || emailchecking.message == "Invalid Data"{
+                    
+                    self?.emailCheck.image = #imageLiteral(resourceName: "Yes")
+                    
+                    
+                }
+                else{
+                    let alertController = UIAlertController(title: "",message: "네트워크 문제입니다.", preferredStyle: UIAlertControllerStyle.alert)
+                    let cancelButton = UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: nil)
+                    alertController.addAction(cancelButton)
+                    self?.present(alertController,animated: true,completion: nil)
+                    
+                }
+            }
+        }
+        
+        
+    }
+    
+    @objc func numberCheckcall(_ sender: UITextField){
+        
+        if ownernumberTF.text?.isEmpty == false{
+            
+            joinManager.phonecheck(number: gsno(ownernumberTF.text)) {[weak self] (numberchecking) in
+                
+                if numberchecking.message == "Success Phone Number Check"{
+                    
+                    self?.phoneCheck.image = #imageLiteral(resourceName: "Yes-Color")
+                    
+                }
+                else if numberchecking.message == "This Phone Number Already Exists." || numberchecking.message == "Invalid Data"{
+                    
+                    self?.phoneCheck.image = #imageLiteral(resourceName: "Yes")
+                    
+                    
+                }
+                else{
+                    let alertController = UIAlertController(title: "",message: "네트워크 문제입니다.", preferredStyle: UIAlertControllerStyle.alert)
+                    let cancelButton = UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: nil)
+                    alertController.addAction(cancelButton)
+                    self?.present(alertController,animated: true,completion: nil)
+                    
+                }
+                
+            }
+            
+        }
+        
+        
+    }
+    
+    @objc func companynumbercheck(_ sender: UITextField){
+        
+        if companynumTF.text?.isEmpty == false{
+            
+            joinManager.companynumcheck(companynumber: gsno(companynumTF.text)){[weak self] (comNum) in
+                
+                if comNum.message == "Success Sup_regist_num Check"{
+                    
+                    self?.comnumCheck.image = #imageLiteral(resourceName: "Yes-Color")
+                    
+                }
+                else if comNum.message == "This Sup_regist_num Already Exists." || comNum.message == "Invalid Data"{
+                    print(comNum.message)
+                    self?.comnumCheck.image = #imageLiteral(resourceName: "Yes")
+                    
+                    
+                }
+                else{
+                    let alertController = UIAlertController(title: "",message: "네트워크 문제입니다.", preferredStyle: UIAlertControllerStyle.alert)
+                    let cancelButton = UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: nil)
+                    alertController.addAction(cancelButton)
+                    self?.present(alertController,animated: true,completion: nil)
+                    
+                }
+                
+            }
+            
+        }
+        
+        
         
         
     }
@@ -137,11 +231,18 @@ class KakaoOwnerJoinViewController: UIViewController, addressDelegate {
     }
     @IBAction func KownerJoinAction(_ sender: Any){
         
-        let join = JoinNM()
-        join.nativeKakaoOwnerJoin(sup_pw: kakaoUserId, sup_name: gsno(ownernameTF.text), sup_email: gsno(owneremailTF.text), sup_phone: gsno(ownernumberTF.text), sup_regist_num: gsno(companynumTF.text), mar_name: gsno(companynameTF.text), mar_locate_lat: geolat, mar_locate_long: geolong, mar_addr: gsno(companyadress1TF.text), sup_id: kakaoUserId) { [weak self](Join) in
-            if Join.message == "Success Signup"{
+        
+        joinManager.nativeKakaoOwnerJoin(sup_pw: kakaoUserId, sup_name: gsno(ownernameTF.text), sup_email: gsno(owneremailTF.text), sup_phone: gsno(ownernumberTF.text), sup_regist_num: gsno(companynumTF.text), mar_name: gsno(companynameTF.text), mar_locate_lat: geolat, mar_locate_long: geolong, mar_addr: gsno(companyadress1TF.text), sup_id: kakaoUserId) { [weak self](kakaojoin) in
+            if kakaojoin.message == "Success Signup"{
                 
                 let mainview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbarview") as! TabBarViewController
+                
+                let userdata = UserDefaults.standard
+                userdata.set(kakaojoin.token, forKey: "usertoken")
+                userdata.set(kakaojoin.cate_flag, forKey: "cate_flag")
+                userdata.set(1, forKey: "identify")
+                userdata.set(kakaojoin.locate_flag,forKey: "selectlocation")
+                userdata.synchronize()
                 
                 self?.present(mainview, animated: true, completion: nil)
             }

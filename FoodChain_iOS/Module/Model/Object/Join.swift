@@ -11,7 +11,11 @@ import Foundation
 struct Join: Codable {
     var message: String?
     var token: String?
+    var identify:Int?
     var cate_flag : Int?
+    var locate_flag: Int?
+//    var data : [Data]?
+//    var coupon: Coupon?
 
     
 }

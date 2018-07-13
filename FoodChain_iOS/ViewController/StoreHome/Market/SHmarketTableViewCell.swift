@@ -11,10 +11,12 @@ import UIKit
 class SHmarketTableViewCell: UITableViewCell {
 
     @IBOutlet weak var CV: UICollectionView!
+    @IBOutlet weak var companyImg: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         CV.delegate = self
         CV.dataSource = self
+        
         // Initialization code
     }
 

@@ -27,13 +27,57 @@ class KakaoJoinModule {
             }else if session.isOpen() {
                 KOSessionTask.userMeTask(completion: { (error, kakao) -> Void in
                     if kakao != nil{
-                        
-                        print(kakao!)
-                        let mainview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "kakaoselectusertype") as! KakaoSelectUsertypeViewController
-                        mainview.kakaoUserId = self.gsno(kakao?.id)
-                        mainview.KakaoNickname = self.gsno(kakao?.nickname)
-                        
-                        view.navigationController?.pushViewController(mainview, animated: true)
+                        let kakaologinCheck = LoginNM()
+                        kakaologinCheck.kakaoidcheck(kakaoid: self.gsno(kakao?.id)) {(kakaocheck) in
+                            _ = UIViewController.displaySpinner(onView: view.view)
+                            if kakaocheck.message == "Success Id Check"{
+                                print(kakao!)
+                                let mainview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "kakaoselectusertype") as! KakaoSelectUsertypeViewController
+                                mainview.kakaoUserId = (kakao?.id)!
+                                mainview.KakaoNickname = (kakao?.nickname)!
+                                UIViewController.removeSpinner(spinner: view.view)
+                                view.navigationController?.pushViewController(mainview, animated: true)
+                                
+                            }
+                            else if kakaocheck.message == "This Id Already Exists."{
+                               
+                                let kakaologinManager = LoginNM()
+                                kakaologinManager.kakaologin(kakaoid: (kakao?.id)!, completion: {(KakaoLogin) in
+                                    if KakaoLogin.message == "Success Signin"{
+                                        let mainview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbarview") as! TabBarViewController
+                                        print(KakaoLogin.cate_flag!)
+                                        print(KakaoLogin.identify!)
+                                        print(KakaoLogin.locate_flag!)
+                                        let userdata = UserDefaults.standard
+                                        userdata.set(KakaoLogin.token, forKey: "usertoken")
+                                        userdata.set(KakaoLogin.cate_flag, forKey: "cate_flag")
+                                        userdata.set(KakaoLogin.identify, forKey: "identify")
+                                        userdata.set(KakaoLogin.locate_flag,forKey: "selectlocation")
+                                        userdata.synchronize()
+                                        UIViewController.removeSpinner(spinner: view.view)
+                                        view.present(mainview, animated: true, completion: nil)
+                                    }
+                                    else{
+                                        print(1)
+                                        let alertController = UIAlertController(title: "",message: "네트워크 문제입니다.", preferredStyle: UIAlertControllerStyle.alert)
+                                        let cancelButton = UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: nil)
+                                        alertController.addAction(cancelButton)
+                                        view.present(alertController,animated: true,completion: nil)
+                                    }
+                                    
+                                })
+                                
+                            }
+                            else{
+                                print(2)
+                                let alertController = UIAlertController(title: "",message: "네트워크 문제입니다.", preferredStyle: UIAlertControllerStyle.alert)
+                                let cancelButton = UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: nil)
+                                alertController.addAction(cancelButton)
+                                view.present(alertController,animated: true,completion: nil)
+                                
+                            }
+                            
+                        }
                         
                     }
                     else{

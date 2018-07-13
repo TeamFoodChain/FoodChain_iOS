@@ -16,8 +16,8 @@ class FavoriteCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var selectImg: UIImageView!
     
     override func awakeFromNib() {
-        self.layer.cornerRadius = 25.0
-        favoriteImg.layer.cornerRadius = 25.0
+        self.layer.cornerRadius = self.frame.size.width/4
+    
         
     }
     

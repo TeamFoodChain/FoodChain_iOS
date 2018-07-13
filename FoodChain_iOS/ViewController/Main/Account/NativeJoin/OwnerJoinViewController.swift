@@ -262,8 +262,15 @@ class OwnerJoinViewController: UIViewController,  addressDelegate{
             if Join.message == "Success Signup"{
                 
                 let mainview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbarview") as! TabBarViewController
-                UserDefaults.standard.set(Join.token, forKey: "usertoken")
-                UserDefaults.standard.set(Join.cate_flag, forKey: "cate_flag")
+             
+                
+                let userdata = UserDefaults.standard
+                userdata.set(Join.token, forKey: "usertoken")
+                userdata.set(Join.cate_flag, forKey: "cate_flag")
+                userdata.set(1, forKey: "identify")
+                userdata.set(Join.locate_flag,forKey: "selectlocation")
+                userdata.synchronize()
+                
                 self?.present(mainview, animated: true, completion: nil)
             }
             else{

@@ -9,6 +9,31 @@
 import Foundation
 import UIKit
 import Kingfisher
+
+extension UIViewController {
+    class func displaySpinner(onView : UIView) -> UIView {
+        let spinnerView = UIView.init(frame: UIScreen.main.bounds)
+        spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+        let ai = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
+        ai.color = #colorLiteral(red: 1, green: 0.434984386, blue: 0.4061706066, alpha: 1)
+        ai.startAnimating()
+        ai.center = spinnerView.center
+    
+        
+        DispatchQueue.main.async {
+            spinnerView.addSubview(ai)
+            onView.addSubview(spinnerView)
+        }
+        
+        return spinnerView
+    }
+    
+    class func removeSpinner(spinner :UIView) {
+        DispatchQueue.main.async {
+            spinner.removeFromSuperview()
+        }
+    }
+}
 extension UINavigationBar{
     
     
@@ -23,6 +48,35 @@ extension UITextField {
         self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
         self.layer.shadowOpacity = 1.0
         self.layer.shadowRadius = 0.0
+    }
+}
+extension UITextView {
+    
+    func centerText() {
+        self.textAlignment = .center
+        let fittingSize = CGSize(width: bounds.width, height: CGFloat.greatestFiniteMagnitude)
+        let size = sizeThatFits(fittingSize)
+        let topOffset = (bounds.size.height - size.height * zoomScale) / 2
+        let positiveTopOffset = max(1, topOffset)
+        contentOffset.y = -positiveTopOffset
+    }
+    
+}
+
+extension NetworkDelegate{
+    func gsno(_ data: String?) -> String {
+        guard let str = data else {
+            return ""
+        }
+        return str
+    }
+    
+    //옵셔널 Int를 해제하는데 값이 nil이면 0을 반환
+    func gino(_ data: Int?) -> Int {
+        guard let num = data else {
+            return 0
+        }
+        return num
     }
 }
 extension UITableViewCell{
