@@ -11,6 +11,7 @@ import UIKit
 class SHcategoryHeaderCollectionReusableView: UICollectionReusableView {
     
     
+    @IBOutlet weak var categoryLB: UILabel!
     @IBOutlet weak var grid4Btn: UIButton!
     @IBOutlet weak var grid2Btn: UIButton!
     

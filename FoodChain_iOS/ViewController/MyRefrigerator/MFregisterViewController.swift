@@ -32,9 +32,7 @@ class MFregisterViewController: UIViewController {
         super.viewDidLoad()
         
 
-        
-       
-
+      
         
         productImg.image = photo
         
@@ -43,6 +41,11 @@ class MFregisterViewController: UIViewController {
         enddateTF.setBottomBorder()
         endtimeTF.setBottomBorder()
         endtimeTF2.setBottomBorder()
+        
+        productImg.layer.cornerRadius = 10
+        
+        
+        
         endtimeTF.isHidden = true
         endtimeTF2.isHidden = true
         
@@ -87,7 +90,10 @@ class MFregisterViewController: UIViewController {
         self.view.endEditing(true)
     }
     @IBAction func timesailAction(_ sender: Any) {
+      
         if flag == 0{
+            UserDefaults.standard.set(1, forKey: "timesale")
+            UserDefaults.standard.synchronize()
         timesailBtn.setImage(#imageLiteral(resourceName: "clockIcon"), for: .normal)
         timesalenoticeLB.text = "타임세일 시간을 입력해주세요!"
         endtimeTF.isHidden = false
@@ -95,6 +101,8 @@ class MFregisterViewController: UIViewController {
             flag = 1
         }
         else{
+            UserDefaults.standard.set(0, forKey: "timesale")
+            UserDefaults.standard.synchronize()
             timesailBtn.setImage(#imageLiteral(resourceName: "clockIcogrey"), for: .normal)
             timesalenoticeLB.text = "타임 세일을 하고 싶다면 눌러주세요!"
             endtimeTF.isHidden = true
@@ -103,11 +111,18 @@ class MFregisterViewController: UIViewController {
             
         }
         
+        
     }
     
     @IBAction func nextAction(_ sender: Any) {
+        
         let nextview = UIStoryboard.init(name: "MyRefrigerator", bundle: nil).instantiateViewController(withIdentifier: "registeraddView") as! MFregister2ViewController
-        nextview.img = productImg.image
+                nextview.img = productImg.image
+                nextview.enddateTF =  enddateTF.text!
+                nextview.endtimeTF = endtimeTF.text!
+                nextview.endtimeTF2 = endtimeTF2.text!
+                nextview.productTF = productTF.text!
+                nextview.productnameTF = productnameTF.text!
         navigationController?.pushViewController(nextview, animated: true)
     }
     

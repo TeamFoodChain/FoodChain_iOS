@@ -56,29 +56,10 @@ class KakaoJoinModule {
                                         userdata.synchronize()
 
                                         
-                                        let mainget = StorehomeMainNM()
-                                        let token = UserDefaults.standard.string(forKey: "usertoken")
-                                        mainget.getmaindata(token: token!, completion: { (main) in
-                                            
-                                            if main.message == "Success to Get Data"{
-                                                
-                                                let storehome = UIStoryboard.init(name: "StoreHome", bundle: nil).instantiateViewController(withIdentifier: "firstview") as! StoreHomeViewController
-                                                storehome.maindata = main
-                                                print(main)
-                                                
-                                                UINavigationController.removeSpinner(spinner: view.view)
-                                                view.present(mainview, animated: true, completion: nil)
-                                                
-                                            }
-                                            else{
-                                                 UINavigationController.removeSpinner(spinner: view.view)
-                                                view.present(mainview, animated: true, completion: nil)
-                                                
-                                            }
-                                      
-                                        })
+                                        UINavigationController.removeSpinner(spinner: view.view)
+                                        view.present(mainview, animated: true, completion: nil)
                                         
-                                        
+                                    
                                        
                                     }
                                     else{

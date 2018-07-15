@@ -70,6 +70,8 @@ class LoginViewController: UIViewController {
             if natlogin.message == "Success Signin"{
                 let mainview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbarview") as! TabBarViewController
                 
+                
+                
                 print(natlogin.cate_flag!)
                 print(natlogin.identify!)
                 print(natlogin.locate_flag!)
@@ -81,27 +83,7 @@ class LoginViewController: UIViewController {
                 userdata.set(natlogin.locate_flag,forKey: "selectlocation")
                 userdata.synchronize()
                 
-                let token = UserDefaults.standard.string(forKey: "usertoken")
-               
-                self?.mainget.getmaindata(token: token!, completion: { [weak self](maindata) in
-                    
-                    if maindata.message == "Success to Get Data"{
-                    
-                         print(SHmainObject.CodingKeys.data.stringValue)
-                
-                    
-                        self?.present(mainview, animated: true, completion: nil)
-                        
-                    }
-                    else{
-                      
-                        self?.present(mainview, animated: true, completion: nil)
-                        
-                        
-                    }
-                    
-                })
-                
+                self?.present(mainview, animated: true, completion: nil)
             
                 
             }else if natlogin.message == "Incorrect Information"{

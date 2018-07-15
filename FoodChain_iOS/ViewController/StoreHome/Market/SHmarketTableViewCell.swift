@@ -12,6 +12,8 @@ class SHmarketTableViewCell: UITableViewCell {
 
     @IBOutlet weak var CV: UICollectionView!
     @IBOutlet weak var companyImg: UIImageView!
+    @IBOutlet weak var marketNameLB: UILabel!
+    @IBOutlet weak var marketAddressLB: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         CV.delegate = self

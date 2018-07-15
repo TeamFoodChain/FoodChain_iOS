@@ -22,36 +22,53 @@ class MyRefrigeratorViewController: UIViewController ,UINavigationControllerDele
         navigationController?.navigationBar.shadowImage = UIImage()
         
         
-        
         //- Pageview Library 코드
         let first = UIStoryboard.init(name: "MyRefrigerator", bundle: nil).instantiateViewController(withIdentifier: "exdateView")
         let second = UIStoryboard.init(name: "MyRefrigerator", bundle: nil).instantiateViewController(withIdentifier: "uploadstoreView")
-       
         
         
-        let pagingViewController = FixedPagingViewController(viewControllers: [
-            first,
-            second
-            ])
+        if  UserDefaults.standard.integer(forKey: "identify") == 0{
+            
+            addChildViewController(first)
+            view.addSubview(first.view)
+            
+            
+            
+            
+            
+        }else{
+           
+            
+            
+            let pagingViewController = FixedPagingViewController(viewControllers: [
+                first,
+                second
+                ])
+            
+            
+            addChildViewController(pagingViewController)
+            view.addSubview(pagingViewController.view)
+            
+            pagingViewController.didMove(toParentViewController: self)
+            pagingViewController.view.translatesAutoresizingMaskIntoConstraints = false
+            
+            pagingViewController.indicatorColor = #colorLiteral(red: 0.2158766389, green: 0.6043385863, blue: 0.4158287644, alpha: 1)
+            pagingViewController.selectedTextColor = #colorLiteral(red: 0.2158766389, green: 0.6043385863, blue: 0.4158287644, alpha: 1)
+            pagingViewController.menuItemSize = PagingMenuItemSize.sizeToFit(minWidth: self.view.layer.bounds.width/2, height: 30)
+            
+            
+            NSLayoutConstraint.activate([
+                pagingViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                pagingViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                pagingViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+                pagingViewController.view.topAnchor.constraint(equalTo: view.topAnchor)
+                ])
+            
+            
+        }
         
-      
-        addChildViewController(pagingViewController)
-        view.addSubview(pagingViewController.view)
         
-        pagingViewController.didMove(toParentViewController: self)
-        pagingViewController.view.translatesAutoresizingMaskIntoConstraints = false
         
-        pagingViewController.indicatorColor = #colorLiteral(red: 0.2158766389, green: 0.6043385863, blue: 0.4158287644, alpha: 1)
-        pagingViewController.selectedTextColor = #colorLiteral(red: 0.2158766389, green: 0.6043385863, blue: 0.4158287644, alpha: 1)
-        pagingViewController.menuItemSize = PagingMenuItemSize.sizeToFit(minWidth: self.view.layer.bounds.width/2, height: 30)
-        
-   
-        NSLayoutConstraint.activate([
-            pagingViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            pagingViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            pagingViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            pagingViewController.view.topAnchor.constraint(equalTo: view.topAnchor)
-            ])
         //
 
     }

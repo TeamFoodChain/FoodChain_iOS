@@ -68,6 +68,10 @@
 		52B9E55D20F7D14F00EEA52B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B9E55C20F7D14E00EEA52B /* Assets.xcassets */; };
 		52B9E55F20F7EF2300EEA52B /* ChoiceNM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9E55E20F7EF2300EEA52B /* ChoiceNM.swift */; };
 		52B9E56620F82E9500EEA52B /* LocateNM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9E56520F82E9500EEA52B /* LocateNM.swift */; };
+		52C1533020F999AF0081A7A2 /* Data2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C1532D20F999AF0081A7A2 /* Data2.swift */; };
+		52C1533120F999AF0081A7A2 /* Markets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C1532E20F999AF0081A7A2 /* Markets.swift */; };
+		52C1533220F999AF0081A7A2 /* AroundMarket .swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C1532F20F999AF0081A7A2 /* AroundMarket .swift */; };
+		52C1533420F9B2BF0081A7A2 /* SendData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C1533320F9B2BF0081A7A2 /* SendData.swift */; };
 		52C6D03B20ECC9D00050A7C8 /* SHhomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6D03A20ECC9D00050A7C8 /* SHhomeViewController.swift */; };
 		52C6D03F20ECF85B0050A7C8 /* SHmarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C6D03E20ECF85B0050A7C8 /* SHmarketViewController.swift */; };
 		52CF7F9220EFA05700B3F13E /* SHhomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CF7F9120EFA05700B3F13E /* SHhomeTableViewCell.swift */; };
@@ -150,6 +154,10 @@
 		52B9E55C20F7D14E00EEA52B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52B9E55E20F7EF2300EEA52B /* ChoiceNM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceNM.swift; sourceTree = "<group>"; };
 		52B9E56520F82E9500EEA52B /* LocateNM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocateNM.swift; sourceTree = "<group>"; };
+		52C1532D20F999AF0081A7A2 /* Data2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data2.swift; sourceTree = "<group>"; };
+		52C1532E20F999AF0081A7A2 /* Markets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Markets.swift; sourceTree = "<group>"; };
+		52C1532F20F999AF0081A7A2 /* AroundMarket .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AroundMarket .swift"; sourceTree = "<group>"; };
+		52C1533320F9B2BF0081A7A2 /* SendData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendData.swift; sourceTree = "<group>"; };
 		52C6D03A20ECC9D00050A7C8 /* SHhomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHhomeViewController.swift; sourceTree = "<group>"; };
 		52C6D03E20ECF85B0050A7C8 /* SHmarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHmarketViewController.swift; sourceTree = "<group>"; };
 		52CF7F9120EFA05700B3F13E /* SHhomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHhomeTableViewCell.swift; sourceTree = "<group>"; };
@@ -263,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				52B5CC5220F864AC001E3339 /* Join.swift */,
+				5278498520F9816C00D04C0B /* MarketPlace */,
 				52B5CC5420F864EF001E3339 /* Storehome_main */,
 				52B5436A20F658F300C64E51 /* Geoconding */,
 				52634FED20F6007900C0673E /* SearchAddress */,
@@ -311,6 +320,16 @@
 				523553EF20F3438C00BA50DA /* UploadstoreEmptyTableViewCell.swift */,
 			);
 			path = uploadstore;
+			sourceTree = "<group>";
+		};
+		5278498520F9816C00D04C0B /* MarketPlace */ = {
+			isa = PBXGroup;
+			children = (
+				52C1532D20F999AF0081A7A2 /* Data2.swift */,
+				52C1532F20F999AF0081A7A2 /* AroundMarket .swift */,
+				52C1532E20F999AF0081A7A2 /* Markets.swift */,
+			);
+			path = MarketPlace;
 			sourceTree = "<group>";
 		};
 		528E324420EC82D10082D52C /* KakaoJoin */ = {
@@ -483,6 +502,7 @@
 				52B9E55E20F7EF2300EEA52B /* ChoiceNM.swift */,
 				52B9E56520F82E9500EEA52B /* LocateNM.swift */,
 				52B5CC5920F86529001E3339 /* StorehomeMainNM.swift */,
+				52C1533320F9B2BF0081A7A2 /* SendData.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -700,12 +720,14 @@
 				52B5437420F658F300C64E51 /* Location.swift in Sources */,
 				523EEE1820F45A3E00A87F9E /* MFregister2ViewController.swift in Sources */,
 				52B5CC5A20F86529001E3339 /* StorehomeMainNM.swift in Sources */,
+				52C1533020F999AF0081A7A2 /* Data2.swift in Sources */,
 				52634FF520F6007900C0673E /* Juso.swift in Sources */,
 				52634A8720EB4C090028A33E /* KakaoJoinViewController.swift in Sources */,
 				52B5437820F658F300C64E51 /* GeoResults.swift in Sources */,
 				52FBDEED20E87AC800AEEB1E /* Extension.swift in Sources */,
 				52B5CC5720F864EF001E3339 /* Data.swift in Sources */,
 				52755B7520F2D966009453A7 /* SHhomeMenuCollectionViewCell.swift in Sources */,
+				52C1533220F999AF0081A7A2 /* AroundMarket .swift in Sources */,
 				528E324120EC7CDB0082D52C /* KakaoSelectUsertypeViewController.swift in Sources */,
 				52FBDEF620E88B3C00AEEB1E /* StoreHomeViewController.swift in Sources */,
 				52C6D03B20ECC9D00050A7C8 /* SHhomeViewController.swift in Sources */,
@@ -717,6 +739,7 @@
 				52B5437720F658F300C64E51 /* Viewport.swift in Sources */,
 				52634FF320F6007900C0673E /* Common.swift in Sources */,
 				52634FE120F5C04E00C0673E /* JoinNM.swift in Sources */,
+				52C1533420F9B2BF0081A7A2 /* SendData.swift in Sources */,
 				5258A6B820F29372006C696B /* SHhomeDetailTableViewCell.swift in Sources */,
 				528A517120F52FB300DB39FC /* SHmarketCollectionViewCell.swift in Sources */,
 				52755B8020F2FC71009453A7 /* ExdateViewController.swift in Sources */,
@@ -728,6 +751,7 @@
 				522F55DB20F0EA960004A8FE /* SHhomeDetailViewController.swift in Sources */,
 				523553EC20F3314D00BA50DA /* UploadstoreTableViewCell.swift in Sources */,
 				52B5437C20F6985700C64E51 /* LoginNM.swift in Sources */,
+				52C1533120F999AF0081A7A2 /* Markets.swift in Sources */,
 				523553EA20F3313D00BA50DA /* ExdateTableViewCell.swift in Sources */,
 				528A516F20F52CF300DB39FC /* SHmarketTableViewCell.swift in Sources */,
 				52634FF720F6047700C0673E /* SearchAdViewController.swift in Sources */,

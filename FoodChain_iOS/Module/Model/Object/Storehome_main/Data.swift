@@ -24,6 +24,7 @@ struct Data : Codable {
 	let pro_info : String?
 	let mar_idx : Int?
     let pro_img:String?
+    let dist : Double?
 
 	enum CodingKeys: String, CodingKey {
 
@@ -38,6 +39,7 @@ struct Data : Codable {
 		case pro_info = "pro_info"
 		case mar_idx = "mar_idx"
         case pro_img = "pro_img"
+        case dist = "dist"
 	}
 
 	init(from decoder: Decoder) throws {
@@ -53,6 +55,7 @@ struct Data : Codable {
 		pro_info = try values.decodeIfPresent(String.self, forKey: .pro_info)
 		mar_idx = try values.decodeIfPresent(Int.self, forKey: .mar_idx)
         pro_img = try values.decodeIfPresent(String.self, forKey: .pro_img)
+        dist = try values.decodeIfPresent(Double.self, forKey: .dist)
 	}
 
 }

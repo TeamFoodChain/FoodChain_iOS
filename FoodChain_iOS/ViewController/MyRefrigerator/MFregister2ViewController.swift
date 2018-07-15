@@ -16,6 +16,16 @@ class MFregister2ViewController: UIViewController ,UITextViewDelegate {
     @IBOutlet weak var priceTF: UITextField!
     @IBOutlet weak var descriptionTV: UITextView!
     
+    
+    
+    
+    var productTF:String = ""
+    var productnameTF:String = ""
+    var enddateTF:String = ""
+    var endtimeTF:String = ""
+    var endtimeTF2:String = ""
+
+    
     var keyboardHeight : CGFloat = 0
     var img :UIImage!
     override func viewDidLoad() {
@@ -73,6 +83,19 @@ class MFregister2ViewController: UIViewController ,UITextViewDelegate {
         }
     }
     
+    @IBAction func sendData(_ sender: Any) {
+        
+        if UserDefaults.standard.integer(forKey: "timesale") == 0{
+            
+        }
+        else if UserDefaults.standard.integer(forKey: "timesale") == 1{
+            
+            
+        }
+        
+        
+        
+    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         self.view.endEditing(true)
@@ -107,14 +130,5 @@ class MFregister2ViewController: UIViewController ,UITextViewDelegate {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+   
 }

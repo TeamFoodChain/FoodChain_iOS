@@ -17,15 +17,16 @@ class SHmarketViewController: UIViewController , CLLocationManagerDelegate,GMSMa
     
     
     var locationManager = CLLocationManager()
-    var flag = 0
+    var flag :Int = -1
     @IBOutlet weak var locationTV: UITableView!
     @IBOutlet weak var mapview: UIView!
-    
+    let marketManager =  StorehomeMainNM()
+    var arouncmarker : AroundMarket?
     let googleMaps: GMSMapView! = GMSMapView.map(withFrame: CGRect(x: 0,y:0, width: UIScreen.main.bounds.width , height: UIScreen.main.bounds.width), camera: GMSCameraPosition.camera(withLatitude: 37.561104, longitude: 126.994320, zoom: 15.0))
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         let nib = UINib.init(nibName: "DefaultTableViewCell", bundle: nil)
         self.locationTV.register(nib, forCellReuseIdentifier: "defaultCell")
         
@@ -38,10 +39,8 @@ class SHmarketViewController: UIViewController , CLLocationManagerDelegate,GMSMa
         self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
-      
-        
         googleMaps.isMyLocationEnabled = true
-       
+        
         googleMaps.settings.zoomGestures = true
         googleMaps.settings.scrollGestures = true
         googleMaps.settings.allowScrollGesturesDuringRotateOrZoom = true
@@ -51,14 +50,47 @@ class SHmarketViewController: UIViewController , CLLocationManagerDelegate,GMSMa
         
         mapview.addSubview(googleMaps)
         
-        
         //좌표 컨버팅 및 폴리라인 , 마커 그리기
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: 37.561104, longitude: 126.994320)
-        marker.isTappable = true
-        marker.map = googleMaps
-        marker.isTappable = true
+       
+        marketManager.arouncstoredata(token: UserDefaults.standard.string(forKey: "usertoken")!) { [weak self](result) in
+            
+            if result.message == "Success to Get Data"{
+                print("서버연결은 되어있다")
+                
+                self?.arouncmarker = result
+                
+                self?.googleMaps.camera = GMSCameraPosition.camera(withLatitude: (result.data?.addr_lat)!, longitude: (result.data?.addr_long)!, zoom: 15.0)
+                
+                for i in 0..<(result.data?.markets?.count)!{
+
+                    let marker = GMSMarker()
+                    marker.position = CLLocationCoordinate2D(latitude: Double((result.data?.markets![i].mar_locate_lat)!), longitude: Double((result.data?.markets![i].mar_locate_long)!))
+                    marker.isTappable = true
+                    marker.map = self?.googleMaps
+                    marker.layer.backgroundColor = #colorLiteral(red: 0.2158766389, green: 0.6043385863, blue: 0.4158287644, alpha: 1)
+
+                }
+
         
+                
+            }
+            else if result.message == "No Data"{
+                let alertController = UIAlertController(title: "",message: "동네 주변 상품이 있는 마켓이 없습니다.", preferredStyle: UIAlertControllerStyle.alert)
+                let cancelButton = UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: nil)
+                alertController.addAction(cancelButton)
+                self?.present(alertController,animated: true,completion: nil)
+                
+                
+            }
+            else{
+                let alertController = UIAlertController(title: "",message: "네트워크 문제입니다.", preferredStyle: UIAlertControllerStyle.alert)
+                let cancelButton = UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: nil)
+                alertController.addAction(cancelButton)
+                self?.present(alertController,animated: true,completion: nil)
+                
+            }
+        }
+
         
         
         //그라데이션 뷰
@@ -84,37 +116,57 @@ class SHmarketViewController: UIViewController , CLLocationManagerDelegate,GMSMa
     }
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         
-        flag = 1
+        let a = marker.position.latitude
+        
+        for i in 0..<(arouncmarker?.data?.markets?.count)!{
+            
+            
+            if (arouncmarker?.data?.markets![i].mar_locate_lat == a){
+                
+                flag = i
+                locationTV.reloadData()
+            }
+            
+            
+            
+        }
+        
         locationTV.reloadData()
         
         return true
     }
  
-   
-
 
 }
 extension SHmarketViewController : UITableViewDelegate{
     
 }
 extension SHmarketViewController : UITableViewDataSource{
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
             return 1
         
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if flag == 1{
-        let cell  = tableView.dequeueReusableCell(withIdentifier: "infoCell") as! SHmarketTableViewCell
-            return cell
-            
-        }
-        else{
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { 
+        if flag == -1{
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell") as! DefaultTableViewCell
             
             return cell
+    
+            
+        }
+        else{
+            let cell  = tableView.dequeueReusableCell(withIdentifier: "infoCell") as! SHmarketTableViewCell
+            cell.marketAddressLB.text = arouncmarker?.data?.markets![flag].mar_addr
+            cell.marketNameLB.text = arouncmarker?.data?.markets![flag].mar_name
+            
+            return cell
+            
+           
             
         }
         

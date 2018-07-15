@@ -15,14 +15,13 @@ class StoreHomeViewController: UIViewController {
     
     let token = UserDefaults.standard.string(forKey: "usertoken")
     
-    var maindata : SHmainObject?
+     let mainManager = StorehomeMainNM()
     
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
     
-        
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
@@ -84,12 +83,6 @@ class StoreHomeViewController: UIViewController {
             pagingViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             pagingViewController.view.topAnchor.constraint(equalTo: view.topAnchor)
             ])
-        //
-        
-        
-        
-        
-       
         
             
     }
